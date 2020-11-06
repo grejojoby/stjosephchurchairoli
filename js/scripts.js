@@ -133,7 +133,9 @@
 
     function teamSlider() {
         $(".team-slider").owlCarousel({
-            autoplay : false,
+            autoplay : true,
+            loop: true,
+            autoplayTimeout: 1000,
             items: 3,
             dots: true,
             responsiveRefreshRate: 200,
