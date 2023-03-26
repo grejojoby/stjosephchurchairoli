@@ -6,7 +6,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Youth - St. Joseph Church, Airoli</title>
+    <title>Executives - St. Joseph Church, Airoli</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="img/assets/favicon.png" rel="icon" type="image/png">
     <link href="css/init.css" rel="stylesheet" type="text/css">
@@ -17,6 +17,7 @@
     <link href="css/colors/purple.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700%7CRaleway:400,100,200,300%7CHind:400,300"
         rel="stylesheet" type="text/css">
+    <script src="js/departmentExecutives.js"></script>
 </head>
 
 <body data-fade-in="true">
@@ -143,7 +144,7 @@
             <div class="row text-center">
 
                 <div class="col-md-12 text-center pb20">
-                    <h2><small>Executives</small><br><strong>Youth</strong></h2>
+                    <h2><small>Parish Executives</small><br><strong>Parish Oraganizations</strong></h2>
 
                 </div>
 
@@ -152,46 +153,138 @@
                 <section id="elements-buttons" class="pt100 pb80">
                     <div class="container">
                         <div class="row">
+
                             <div class="col-md-12 mr-auto text-center">
+
+                                <div class="buttons-tabs-centered">
+
+                                    <ul id="buttonTabs" class="nav-tabs nav-tabs-center">
+                                        <li class="active"><a href="#tab-c1" data-toggle="tab">St. Euphresia</a></li>
+                                        <li class=""><a href="#tab-c2" data-toggle="tab">St. Mother Teresa</a></li>
+                                        <li class=""><a href="#tab-c3" data-toggle="tab">St. Mariam Thressia</a></li>
+                                        <li class=""><a href="#tab-c4" data-toggle="tab">St. Alphonsa</a></li>
+                                        <li class=""><a href="#tab-c5" data-toggle="tab">St. Mary's</a></li>
+                                        <li class=""><a href="#tab-c6" data-toggle="tab">St. Chavara</a></li>
+                                    </ul>
+                                </div>
                                 <div class="col-md-10 mr-auto text-center">
                                     <div id="myTabContent" class="tab-content">
 
                                         <div class="tab-pane active in" id="tab-c1">
-                                            <div class="col-md-12 pt40">
+                                            <div class="col-md-12 pt40" id="StEuphresiaUnit">
 
-                                                <div class="col-md-4 col-sm-6 feature-center">
-                                                    <i class="icon-profile-male size-3x color"></i>
-                                                    <i class="icon-profile-male back-icon"></i>
-                                                    <div class="feature-left-content">
-                                                        <h5><strong>John Doe</strong><br>President</h5>
-                                                        <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p> -->
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6 feature-center">
-                                                    <i class="icon-profile-male size-3x color"></i>
-                                                    <i class="icon-profile-male back-icon"></i>
-                                                    <div class="feature-left-content">
-                                                        <h5><strong>John Doe</strong><br>Secretery</h5>
-                                                        <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p> -->
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6 feature-center">
-                                                    <i class="icon-profile-male size-3x color"></i>
-                                                    <i class="icon-profile-male back-icon"></i>
-                                                    <div class="feature-left-content">
-                                                        <h5><strong>John Doe</strong><br>Treasurer</h5>
-                                                        <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p> -->
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
+
+                                        <div class="tab-pane" id="tab-c2">
+                                            <div class="col-md-12 pt40" id="StMotherTeresaUnit">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="tab-c3">
+                                            <div class="col-md-12 pt40" id="StMariamThressiaUnit">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="tab-c4">
+                                            <div class="col-md-12 pt40" id="StAlphonsaUnit">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="tab-c5">
+                                            <div class="col-md-12 pt40" id="StMarysUnit">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="tab-c6">
+                                            <div class="col-md-12 pt40" id="StChavaraUnit">
+
+                                            </div>
+                                        </div>
+
                                     </div>
+
                                 </div>
+
                             </div>
+
                         </div>
                     </div>
                 </section>
                 <!-- End Button Tabs Centered -->
+
+                <script>
+                    function setExecutives() {
+                        if (unitExecutives.length == 0) {
+                            setTimeout(setExecutives, 500)
+                            return
+                        }
+                        unitExecutives.forEach(element => {
+                            switch (element.unit) {
+                                case 'MotherTeresa':
+                                    document.getElementById('StMotherTeresaUnit').innerHTML += `<div class="col-md-4 col-sm-6 feature-center">
+                                            <i class="icon-profile-male size-3x color"></i>
+                                            <i class="icon-profile-male back-icon"></i>
+                                            <div class="feature-left-content">
+                                                <h5><strong>${element.executive.name}</strong><br>${element.position}</h5>
+                                            </div>
+                                        </div>`;
+                                    break;
+                                case 'MariamThressia':
+                                    document.getElementById('StMariamThressiaUnit').innerHTML += `<div class="col-md-4 col-sm-6 feature-center">
+                                            <i class="icon-profile-male size-3x color"></i>
+                                            <i class="icon-profile-male back-icon"></i>
+                                            <div class="feature-left-content">
+                                                <h5><strong>${element.executive.name}</strong><br>${element.position}</h5>
+                                            </div>
+                                        </div>`;
+                                    break;
+                                case 'Alphonsa':
+                                    document.getElementById('StAlphonsaUnit').innerHTML += `<div class="col-md-4 col-sm-6 feature-center">
+                                            <i class="icon-profile-male size-3x color"></i>
+                                            <i class="icon-profile-male back-icon"></i>
+                                            <div class="feature-left-content">
+                                                <h5><strong>${element.executive.name}</strong><br>${element.position}</h5>
+                                            </div>
+                                        </div>`;
+                                    break;
+                                case 'Euphresia':
+                                    document.getElementById('StEuphresiaUnit').innerHTML += `<div class="col-md-4 col-sm-6 feature-center">
+                                            <i class="icon-profile-male size-3x color"></i>
+                                            <i class="icon-profile-male back-icon"></i>
+                                            <div class="feature-left-content">
+                                                <h5><strong>${element.executive.name}</strong><br>${element.position}</h5>
+                                            </div>
+                                        </div>`;
+                                    break;
+                                case 'Chavara':
+                                    document.getElementById('StChavaraUnit').innerHTML += `<div class="col-md-4 col-sm-6 feature-center">
+                                            <i class="icon-profile-male size-3x color"></i>
+                                            <i class="icon-profile-male back-icon"></i>
+                                            <div class="feature-left-content">
+                                                <h5><strong>${element.executive.name}</strong><br>${element.position}</h5>
+                                            </div>
+                                        </div>`;
+                                    break;
+                                case 'Marys':
+                                    document.getElementById('StMarysUnit').innerHTML += `<div class="col-md-4 col-sm-6 feature-center">
+                                            <i class="icon-profile-male size-3x color"></i>
+                                            <i class="icon-profile-male back-icon"></i>
+                                            <div class="feature-left-content">
+                                                <h5><strong>${element.executive.name}</strong><br>${element.position}</h5>
+                                            </div>
+                                        </div>`;
+                                    break;
+                            }
+                        });
+
+                    }
+                    setExecutives();
+                </script>
 
             </div>
         </div>
