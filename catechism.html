@@ -270,6 +270,15 @@
                 </section>
                 <!-- End Button Tabs Centered -->
 
+
+                <!-- Gallery -->
+                <div class="col-md-12 text-center pb20">
+                    <h2><strong>Gallery</strong></h2>
+                </div>
+
+                <div id="gallery" class="team-slider owl-carousel dark-pagination col-md-12">
+                </div>
+                <!-- End Gallery -->
             </div>
         </div>
     </section>
@@ -303,7 +312,16 @@
     <script src="js/jquery.js"></script>
     <script src="js/init.js"></script>
     <script src="js/scripts.js"></script>
-
+    <script type="text/javascript">
+        const otherimgs = document.getElementById('gallery');
+        
+        for (let i = 1; i < 10; i++) {
+            const img = document.createElement("img")
+            img.src = `img/catechism/${i}.jpg`
+            img.alt = `Image ${i}`
+            otherimgs.appendChild(img)
+        }
+    </script>
 </body>
 
 <!-- blog-grid13:09-->

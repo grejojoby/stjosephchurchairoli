@@ -1,3 +1,18 @@
 .priestImage {
     max-height: 262px;
 }
+
+#gallery {
+    width: 600px,
+    margin 0 auto
+}
+
+#current-img {
+    width: 45%;
+}
+
+#other-imgs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
