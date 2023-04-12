@@ -270,6 +270,30 @@
                 </section>
                 <!-- End Button Tabs Centered -->
 
+                <!-- Gallery -->
+                <div class="col-md-12 text-center pb20">
+                    <h2><strong>Gallery</strong></h2>
+
+                </div>
+
+                <div id="gallery" class="gallery">
+                    <div class="wrapper">
+                        <img src="img/catechism/1.jpg" alt="">
+                    </div>
+                    <div class="wrapper">
+                        <img src="img/catechism/2.jpg" alt="">
+                    </div>
+                    <div class="wrapper">
+                        <img src="img/catechism/3.jpg" alt="">
+                    </div>
+                    <div class="wrapper">
+                        <img src="img/catechism/4.jpg" alt="">
+                    </div> 
+                </div>
+                <div class="btnContainer">
+                    <button class="btn">Load More</button>
+                </div>
+                <!-- End Gallery-->
             </div>
         </div>
     </section>
@@ -304,6 +328,29 @@
     <script src="js/init.js"></script>
     <script src="js/scripts.js"></script>
 
+    <script>
+        const gallery = document.getElementById("gallery")
+        const wrapper = document.querySelectorAll('.wrapper');
+        const btn = document.querySelector('.btn');
+        let current = 4;
+
+        btn.addEventListener('click', () => {
+            for (let i = current+1; i < current + 5; i++) {
+                let wrapperElem = document.createElement('div');
+                wrapperElem.classList.add("wrapper");
+                let element = document.createElement('img')
+                element.src = `img/catechism/${i}.jpg`
+                wrapperElem.appendChild(element);
+                gallery.appendChild(wrapperElem);
+                // current++
+            }
+
+            current += 4
+            if (current >= 8) {
+                event.target.style.display = 'none'
+            }
+        })
+    </script>
 </body>
 
 <!-- blog-grid13:09-->
