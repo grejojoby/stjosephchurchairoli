@@ -303,6 +303,17 @@
             </div>
         </div>
     </section>
+    
+    <!-- Announcements -->
+    <section id="announcements">
+        <div class="container">
+            <h3><strong>Announcements</strong></h3>
+            <ul id="announcements-list">
+            </ul>
+        </div>
+    </section>
+    <!-- End Announcements-->
+
     <!-- Team -->
     <section id="team" class="hero-fullscreen2 pt30 pb90">
         <div class="container">
@@ -1046,6 +1057,30 @@
         <script src="js/init.js"></script>
         <script src="js/scripts.js"></script>
 
+        <script>
+            const announcementslist = document.getElementById('announcements-list');
+            const announcements = [{
+                date: "23 April",
+                points: ["first", "second"]
+            }, {
+                date: "27 April",
+                points: ["Hello", "world"]
+            }];
+
+            for (a of announcements) {
+                const ul = document.createElement("ul");
+                ul.innerText = a.date;
+                ul.classList.add("date");
+                
+                for (p of a.points) {
+                    const li = document.createElement("li");
+                    li.innerText = p;
+                    ul.appendChild(li);
+                }
+                announcementslist.appendChild(ul);
+            }
+
+        </script>
 </body>
 
 </html>
