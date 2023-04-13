@@ -2,6 +2,56 @@
 (function ($) {
     "use strict";
 
+    function galleryLoadMore() {
+        const gallery = $(".gallery")[0];
+
+
+        const btn = $('.btn')[0];
+        console.log(btn)
+        let current = 4;
+
+        btn.addEventListener('click', () => {
+            for (let i = current + 1; i < current + 5; i++) {
+                let wrapperElem = document.createElement('div');
+                wrapperElem.classList.add("wrapper");
+                let element = document.createElement('img')
+                element.src = `img/catechism/${i}.jpg`
+                wrapperElem.appendChild(element);
+                gallery.appendChild(wrapperElem);
+            }
+
+            current += 4
+            if (current >= 8) {
+                event.target.style.display = 'none'
+            }
+        })
+    }
+
+    function loadAnnouncements() {
+        const announcementslist = $('#announcements-list')[0]
+        if (!announcementslist) return;
+        const announcements = [{
+            date: "23 April",
+            points: ["first", "second"]
+        }, {
+            date: "27 April",
+            points: ["Hello", "world"]
+        }];
+
+        for (let a of announcements) {
+            const ul = document.createElement("ul");
+            ul.innerText = a.date;
+            ul.classList.add("announcement-item");
+
+            for (let p of a.points) {
+                const li = document.createElement("li");
+                li.innerText = p;
+                ul.appendChild(li);
+            }
+            announcementslist.appendChild(ul);
+        }
+    }
+
     function heroContentSlider() {
         var heroContSlider = $('.hero-content-slider'),
             autoplay = heroContSlider.data('autoplay'),
@@ -49,11 +99,11 @@
             nav: true,
             navSpeed: 500,
             loop: true,
-            autoHeight : true,
+            autoHeight: true,
             navText: ["<img src='img/assets/slider-left-thin-arrow.png'>", "<img src='img/assets/slider-right-thin-arrow.png'>"]
         });
         if ($('.hero-fullscreen>div').hasClass('hero-slider')) {
-            $('.hero-fullscreen').css({'padding': '0'});
+            $('.hero-fullscreen').css({ 'padding': '0' });
         }
     }
 
@@ -72,10 +122,10 @@
             dots: true,
             nav: true,
             loop: loopSlides,
-            autoHeight : true,
+            autoHeight: true,
             navText: ["<img src='img/assets/slider-left-thin-arrow.png'>", "<img src='img/assets/slider-right-thin-arrow.png'>"],
             navRewind: true,
-            slideBy : 'page'
+            slideBy: 'page'
         });
     }
 
@@ -100,7 +150,7 @@
         function progressCircle() {
             var totalProgress, progress, circles;
             circles = document.querySelectorAll('.progress-svg');
-            for(var i = 0; i < circles.length; i++) {
+            for (var i = 0; i < circles.length; i++) {
                 totalProgress = circles[i].querySelector('circle').getAttribute('stroke-dasharray');
                 progress = circles[i].parentElement.getAttribute('data-circle-percent');
                 circles[i].querySelector('.bar').style['stroke-dashoffset'] = totalProgress * progress / 100;
@@ -119,13 +169,13 @@
     }
 
     function vossenIframes() {
-        $('.video-container').click(function(){
+        $('.video-container').click(function () {
             $(this).addClass('reveal');
             var videoImg = $(this).find('img'),
                 videoIframe = $(this).find('iframe'),
                 videoAttr = videoIframe.attr('data-video-embed'),
                 videoPlay = videoAttr + "?autoplay=1&autoplay=true";
-            videoImg.animate({'opacity': 0}, 300);
+            videoImg.animate({ 'opacity': 0 }, 300);
             videoIframe.css('visibility', 'visible').attr('src', videoPlay);
             videoIframe[0].setAttribute('allowFullScreen', '');
         });
@@ -133,7 +183,7 @@
 
     function teamSlider() {
         $(".team-slider").owlCarousel({
-            autoplay : true,
+            autoplay: true,
             loop: true,
             autoplayTimeout: 1000,
             items: 3,
@@ -219,13 +269,13 @@
                 columnWidth: '.vossen-portfolio > div'
             }
         });
-        $grid.imagesLoaded().progress( function() {
+        $grid.imagesLoaded().progress(function () {
             $grid.isotope('layout');
         });
     }
 
     $(window).resize(function () {
-        setTimeout(function(){
+        setTimeout(function () {
             $('.vossen-portfolio-filters .active').trigger('click');
         }, 600);
     });
@@ -274,56 +324,56 @@
         var worksgrid = $('#works-grid'),
             filters = $('.portfolio-filters');
 
-        $(window).on('resize', function() {
+        $(window).on('resize', function () {
 
-            var windowWidth    = Math.max($(window).width(), window.innerWidth),
-                itemWidht      = $('.grid-sizer').width(),
-                itemHeight     = Math.floor(itemWidht * 0.95),
+            var windowWidth = Math.max($(window).width(), window.innerWidth),
+                itemWidht = $('.grid-sizer').width(),
+                itemHeight = Math.floor(itemWidht * 0.95),
                 itemTallHeight = itemHeight * 2;
 
             if (windowWidth > 500) {
-                $('.work-item', worksgrid).each(function() {
+                $('.work-item', worksgrid).each(function () {
                     if ($(this).hasClass('tall')) {
                         $(this).css({
-                            height : itemTallHeight
+                            height: itemTallHeight
                         });
                     } else if ($(this).hasClass('wide')) {
                         $(this).css({
-                            height : itemHeight
+                            height: itemHeight
                         });
                     } else if ($(this).hasClass('wide-tall')) {
                         $(this).css({
-                            height : itemTallHeight
+                            height: itemTallHeight
                         });
                     } else {
                         $(this).css({
-                            height : itemHeight
+                            height: itemHeight
                         });
                     }
                 });
             } else {
-                $('.work-item', worksgrid).each(function() {
+                $('.work-item', worksgrid).each(function () {
                     if ($(this).hasClass('tall')) {
                         $(this).css({
-                            height : itemTallHeight
+                            height: itemTallHeight
                         });
                     } else if ($(this).hasClass('wide')) {
                         $(this).css({
-                            height : itemHeight / 2
+                            height: itemHeight / 2
                         });
                     } else if ($(this).hasClass('wide-tall')) {
                         $(this).css({
-                            height : itemHeight
+                            height: itemHeight
                         });
                     } else {
                         $(this).css({
-                            height : itemHeight
+                            height: itemHeight
                         });
                     }
                 });
             }
 
-            worksgrid.imagesLoaded(function() {
+            worksgrid.imagesLoaded(function () {
                 worksgrid.isotope({
                     layoutMode: 'packery',
                     itemSelector: '.work-item',
@@ -337,7 +387,7 @@
         }).resize();
 
         // Reveal Items
-        worksgrid.isotope({}).imagesLoaded().progress( function() {
+        worksgrid.isotope({}).imagesLoaded().progress(function () {
             vosPortfolio.addClass('reveal');
         });
 
@@ -348,15 +398,15 @@
         var pageNumber = 0,
             workNumberToload = 5;
 
-        var doneText    = 'No More Works',
-            loadText    = 'Show More',
+        var doneText = 'No More Works',
+            loadText = 'Show More',
             loadingText = 'Loading...',
-            errorText   = 'Error! --- This feature will work only when site is on the server ---';
+            errorText = 'Error! --- This feature will work only when site is on the server ---';
 
-        $('#show-more').on('click', function() {
+        $('#show-more').on('click', function () {
             $(this).text(loadingText);
 
-            setTimeout(function() {
+            setTimeout(function () {
                 ajaxLoad(workNumberToload, pageNumber);
             }, 300);
 
@@ -374,7 +424,7 @@
                 data: dataString,
                 dataType: 'html',
                 url: $('.vossen-portfolio, .works-grid').data('more-items-location'),
-                success: function(data) {
+                success: function (data) {
                     var $data = $(data);
                     var start_index = (pageNumber - 1) * workNumberToload;
                     var end_index = + start_index + workNumberToload;
@@ -384,19 +434,19 @@
 
                         $('.vossen-portfolio, .works-grid').append(work).isotope('appended', work).resize();
 
-                        setTimeout(function() {
+                        setTimeout(function () {
                             $loadButton.text(loadText);
                         }, 300);
 
                     } else {
-                        setTimeout(function() {
+                        setTimeout(function () {
                             $loadButton.text(doneText);
                         }, 300);
 
                         setTimeout(function () {
-                            $( "#show-more" ).animate({
+                            $("#show-more").animate({
                                 opacity: 0
-                            }, 400 ).css({"cursor": "default"});
+                            }, 400).css({ "cursor": "default" });
                         }, 1500);
                     }
                 },
@@ -404,7 +454,7 @@
                 error: function (jqXHR, textStatus, errorThrown) {
                     console.log(jqXHR + " :: " + textStatus + " :: " + errorThrown);
 
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $loadButton.removeClass('ss-loading');
                         $loadButton.text(errorText);
                     }, 300);
@@ -419,7 +469,7 @@
             autoplay = testimonialsOwl.data('autoplay'),
             autoplaySpeed = testimonialsOwl.data('speed');
         testimonialsOwl.owlCarousel({
-            autoplay : autoplay,
+            autoplay: autoplay,
             autoplayTimeout: autoplaySpeed,
             autoplaySpeed: 700,
             loop: true,
@@ -434,7 +484,7 @@
             autoplay = clientSlider.data('autoplay'),
             autoplaySpeed = clientSlider.data('speed');
         clientSlider.owlCarousel({
-            autoplay : autoplay,
+            autoplay: autoplay,
             autoplayTimeout: autoplaySpeed,
             loop: false,
             dots: false,
@@ -471,7 +521,7 @@
                     function (data) {
                         document.getElementById('message-info').innerHTML = data;
                         $('#message-info').slideDown(250);
-                        $('#contactform .loader div').fadeOut('slow', function() {
+                        $('#contactform .loader div').fadeOut('slow', function () {
                             $(this).remove();
                         });
                         $('#submit').removeAttr('disabled');
@@ -495,11 +545,11 @@
             $alert.removeClass('alert-danger alert-success');
             $alert.html('');
             $.ajax({
-                type     : 'POST',
-                url      : action,
-                data     : $el.serialize() + '&ajax=1',
-                dataType : 'JSON',
-                success  : function (response) {
+                type: 'POST',
+                url: action,
+                data: $el.serialize() + '&ajax=1',
+                dataType: 'JSON',
+                success: function (response) {
                     if (response.status === 'error') {
                         $alert.html(response.message);
                         $alert.addClass('alert-danger').fadeIn(500);
@@ -543,9 +593,9 @@
             }
         });
         function navSmall() {
-            $(window).scroll(function (){
+            $(window).scroll(function () {
                 if ($(window).scrollTop() > 70) {
-                $('nav').addClass("nav-small");
+                    $('nav').addClass("nav-small");
                 } else {
                     $('nav').removeClass("nav-small");
                 }
@@ -554,14 +604,14 @@
         if ($('nav').data('animation') === 'hiding') {
             var vosWindow = $(window);
             var navPosition = vosWindow.scrollTop();
-            vosWindow.scroll(function() {
-                if(vosWindow.scrollTop() > navPosition) {
+            vosWindow.scroll(function () {
+                if (vosWindow.scrollTop() > navPosition) {
                     $('nav').removeClass('nav-down').addClass('nav-up');
                 } else {
                     $('nav').removeClass('nav-up').addClass('nav-down');
                 }
                 navPosition = vosWindow.scrollTop();
-             });
+            });
             navSmall();
         } else {
             navSmall();
@@ -573,7 +623,7 @@
         function elementsAnchor() {
             var hash = window.location.hash;
             if (hash != '') {
-                setTimeout(function() {
+                setTimeout(function () {
                     $('html, body').stop().animate({
                         scrollTop: $(hash).offset().top - 59
                     }, 1000, 'easeInOutExpo');
@@ -613,7 +663,7 @@
     function twitterFeedSliderInit() {
         if ($('#twitter-feed-slider').length) {
             $('#twitter-feed-slider ul').addClass('twitter-feed-slider navigation-thin');
-             var twitterAutoSpeed = $('#twitter-feed-slider').attr('data-slider-speed');
+            var twitterAutoSpeed = $('#twitter-feed-slider').attr('data-slider-speed');
             $('.twitter-feed-slider').owlCarousel({
                 autoplay: true,
                 autoplayTimeout: twitterAutoSpeed,
@@ -644,20 +694,20 @@
 
     function countUp() {
         $('#fun-facts').waypoint(function () {
-            $('.counter h1').each(function() {
-            var $this = $(this),
-                countTo = $this.attr('data-count');
-                $({ countNum: $this.text()}).animate({
+            $('.counter h1').each(function () {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({ countNum: $this.text() }).animate({
                     countNum: countTo
                 }, {
                     duration: 1700,
-                    easing:'linear',
-                    step: function() {
-                      $this.text(Math.floor(this.countNum));
+                    easing: 'linear',
+                    step: function () {
+                        $this.text(Math.floor(this.countNum));
                     },
-                    complete: function() {
-                      $this.text(this.countNum);
-                      //alert('finished');
+                    complete: function () {
+                        $this.text(this.countNum);
+                        //alert('finished');
                     }
                 });
             });
@@ -678,7 +728,7 @@
                     hours = Math.floor((diff / 1000 / 60 / 60) % 24),
                     days = Math.floor(diff / (1000 * 60 * 60 * 24) % 30.5),
                     months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30.5) % 12);
-                $("#months").text( ('0' + months).slice(-2) + " ," );
+                $("#months").text(('0' + months).slice(-2) + " ,");
                 $("#days").text(('0' + days).slice(-2));
                 $("#hours").text(('0' + hours).slice(-2));
                 $("#minutes").text(('0' + minutes).slice(-2));
@@ -716,7 +766,7 @@
                 columnWidth: '.vossen-blog-grid > div'
             }
         });
-        $bloggrid.imagesLoaded().progress( function() {
+        $bloggrid.imagesLoaded().progress(function () {
             $bloggrid.isotope('layout');
         });
     }
@@ -725,14 +775,14 @@
         $('.lightbox').magnificPopup({
             delegate: 'a',
             type: 'image',
-            gallery:{
-                enabled:true,
+            gallery: {
+                enabled: true,
                 arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"><img src="img/assets/slider-left-thin-arrow.png"></button>',
             },
             mainClass: 'mfp-zoom-in',
             removalDelay: 500, //delay removal to allow out-animation
             callbacks: {
-                beforeOpen: function() {
+                beforeOpen: function () {
                     this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
                 }
             },
@@ -767,6 +817,8 @@
         countdown();
         vossenBlogGrid();
         lightbox();
+        loadAnnouncements();
+        galleryLoadMore();
     });
 
     $(window).load(function () {
