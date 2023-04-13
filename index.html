@@ -1057,30 +1057,6 @@
         <script src="js/init.js"></script>
         <script src="js/scripts.js"></script>
 
-        <script>
-            const announcementslist = document.getElementById('announcements-list');
-            const announcements = [{
-                date: "23 April",
-                points: ["first", "second"]
-            }, {
-                date: "27 April",
-                points: ["Hello", "world"]
-            }];
-
-            for (a of announcements) {
-                const ul = document.createElement("ul");
-                ul.innerText = a.date;
-                ul.classList.add("announcement-item");
-                
-                for (p of a.points) {
-                    const li = document.createElement("li");
-                    li.innerText = p;
-                    ul.appendChild(li);
-                }
-                announcementslist.appendChild(ul);
-            }
-
-        </script>
 </body>
 
 </html>
