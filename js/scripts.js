@@ -2,12 +2,31 @@
 (function ($) {
     "use strict";
 
+    function galleryImgClick() {
+        const modal = $(".modal")[0];
+        const modalImg = $("#gallery-modal")[0];
+        const galleryImg = $(".gallery-img");
+
+        if (galleryImg.length < 1) return;
+        for (let i = 0; i < galleryImg.length; i++) {
+            galleryImg[i].addEventListener("click", () => {
+
+                modal.style.display = "block";
+                modalImg.src = galleryImg[i].src
+            })
+        }
+
+        const close = $(".close")[0];
+        close.onclick = function () {
+            modal.style.display = "none"
+        }
+    }
+
     function galleryLoadMore() {
         const gallery = $(".gallery")[0];
-
-
+        const modal = $(".modal")[0];
+        const modalImg = $("#gallery-modal")[0];
         const btn = $('.btn')[0];
-        console.log(btn)
         let current = 4;
 
         btn.addEventListener('click', () => {
@@ -16,6 +35,13 @@
                 wrapperElem.classList.add("wrapper");
                 let element = document.createElement('img')
                 element.src = `img/catechism/${i}.jpg`
+
+                element.addEventListener("click", () => {
+
+                    modal.style.display = "block";
+                    modalImg.src = element.src
+                })
+
                 wrapperElem.appendChild(element);
                 gallery.appendChild(wrapperElem);
             }
@@ -819,6 +845,7 @@
         lightbox();
         loadAnnouncements();
         galleryLoadMore();
+        galleryImgClick();
     });
 
     $(window).load(function () {
