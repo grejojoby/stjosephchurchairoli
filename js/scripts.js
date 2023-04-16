@@ -25,6 +25,9 @@
     function galleryLoadMore() {
         const galleryRow = $("#gallery-row")[0];
         const btn = $('.btn')[0];
+
+        // You can see the amount of comments, me tring to figure out what is wrong.
+
         // const gallery = $(".gallery")[0];
         // const modal = $(".modal")[0];
         // const modalImg = $("#gallery-modal")[0];
