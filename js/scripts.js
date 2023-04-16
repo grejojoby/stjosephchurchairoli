@@ -23,32 +23,66 @@
     }
 
     function galleryLoadMore() {
-        const gallery = $(".gallery")[0];
-        const modal = $(".modal")[0];
-        const modalImg = $("#gallery-modal")[0];
+        const galleryRow = $("#gallery-row")[0];
         const btn = $('.btn')[0];
+        // const gallery = $(".gallery")[0];
+        // const modal = $(".modal")[0];
+        // const modalImg = $("#gallery-modal")[0];
+        const galleryContainer = document.createElement("div");
+        galleryContainer.classList.add("vossen-portfolio", "lightbox")
+        const mainContainer = document.createElement("div");
+        mainContainer.classList.add("col-md-12", "vossen-gallery")
+
+        console.log(mainContainer.innerHTML)
         let current = 4;
 
         btn.addEventListener('click', () => {
+            console.log("hi")
             for (let i = current + 1; i < current + 5; i++) {
-                let wrapperElem = document.createElement('div');
-                wrapperElem.classList.add("wrapper");
-                let element = document.createElement('img')
-                element.src = `img/catechism/${i}.jpg`
+                const img = document.createElement("img");
+                img.src = `img/catechism/${i}.jpg`;
+                img.alt = `#`;
 
-                element.addEventListener("click", () => {
+                const imgDiv = document.createElement("div");
+                imgDiv.classList.add("item-image", "vossen-gallery");
+                imgDiv.appendChild(img);
 
-                    modal.style.display = "block";
-                    modalImg.src = element.src
-                })
+                const portDiv = document.createElement("div");
+                portDiv.classList.add("portfolio-item");
+                portDiv.append(imgDiv);
 
-                wrapperElem.appendChild(element);
-                gallery.appendChild(wrapperElem);
+                const a = document.createElement('a');
+                // a.href = `img/catechism/${i}.jpg`;
+                a.appendChild(portDiv);
+
+                const div = document.createElement("div");
+                div.classList.add("col-sm-3")
+                div.appendChild(a);
+
+                // const maindiv = document.createElement('div');
+                // div.classList.add("vossen-portfolio", "lightbox")
+                // maindiv.append(div)
+                galleryContainer.appendChild(div);
+                // let wrapperElem = document.createElement('div');
+                // wrapperElem.classList.add("wrapper");
+                // let element = document.createElement('img')
+                // element.src = `img/catechism/${i}.jpg`
+
+                // element.addEventListener("click", () => {
+
+                //     modal.style.display = "block";
+                //     modalImg.src = element.src
+                // })
+
+                // wrapperElem.appendChild(element);
+                // gallery.appendChild(wrapperElem);
             }
-
+            console.log(galleryContainer)
+            mainContainer.appendChild(galleryContainer)
+            galleryRow.appendChild(mainContainer)
             current += 4
             if (current >= 8) {
-                event.target.style.display = 'none'
+                // event.target.style.display = 'none'
             }
         })
     }
