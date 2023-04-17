@@ -2,31 +2,6 @@
 (function ($) {
     "use strict";
 
-    function galleryLoadMore() {
-        const gallery = $(".gallery")[0];
-
-
-        const btn = $('.btn')[0];
-        console.log(btn)
-        let current = 4;
-
-        btn.addEventListener('click', () => {
-            for (let i = current + 1; i < current + 5; i++) {
-                let wrapperElem = document.createElement('div');
-                wrapperElem.classList.add("wrapper");
-                let element = document.createElement('img')
-                element.src = `img/catechism/${i}.jpg`
-                wrapperElem.appendChild(element);
-                gallery.appendChild(wrapperElem);
-            }
-
-            current += 4
-            if (current >= 8) {
-                event.target.style.display = 'none'
-            }
-        })
-    }
-
     function loadAnnouncements() {
         const announcementslist = $('#announcements-list')[0]
         if (!announcementslist) return;
@@ -818,7 +793,6 @@
         vossenBlogGrid();
         lightbox();
         loadAnnouncements();
-        galleryLoadMore();
     });
 
     $(window).load(function () {
