@@ -1,64 +1,14 @@
 .priestImage {
     max-height: 262px;
+    aspect-ratio: 1;
 }
 
-#announcements-list {
-    width: 100%;
-    padding: 0;
-    list-style-type: none;
-    cursor:default;
-    border-right: 2px solid #2e664f;
-    border-left: 2px solid #2e664f;
-    border-bottom: 2px solid #2e664f;
-    border-radius: 5px;
+.announcements-box {
+    border-radius: 20px;
 }
 
-.announcement-item {
-    margin-left: 4%;
-    margin-bottom: 3%;
-    list-style: inside;
-    font-size: larger;
-    color: black;
-    text-decoration: underline;
-}
-
-.announcement-item li {
-    font-size: medium;
-    color: black;
-    margin-left: 5%;
-    list-style: inside;
-    border-bottom: 2.2px solid grey;
-    text-decoration: none !important;
-}
-
-.gallery {
-    display: flex;
-    width: 75%;
-    margin: auto;
-    flex-wrap: wrap;
-}
-
-.gallery img {
-    width: 100%;
-    border: black solid 0.5px;
-}
-
-.wrapper {
-    flex: 1 1 200px;
-    margin: 5px;
-}
-
-.btnContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btnContainer button {
-    border-radius: 5px;
-    width: 150px;
-    margin-top: 25px;
-    font-size: 17px;
-    color: black;
-    text-align: center;
+.annoucements-list li {
+    font-size: 1.5rem;
+    color: #666 !important;
+    font-weight: 400 !important;
 }
