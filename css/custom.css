@@ -12,3 +12,32 @@
     color: #666 !important;
     font-weight: 400 !important;
 }
+
+.sticky-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.background-box {
+    background-color: rgba(0, 0, 0, 0.045);
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.unit-executive-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.unit-executive-item h6 {
+    font-size: 16px;
+}
+
+
+@media screen and (max-width: 577px) {
+    .cat-teacher-item {
+        min-height: 165px;
+        margin: 5px 0;
+    }
+}
