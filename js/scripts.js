@@ -27,6 +27,52 @@
         }
     }
 
+    function loadReadings() {
+        var BibleReadings = GetLiturgicalReadingsJSON();
+        console.log(BibleReadings[0].DayDescription_Eng);
+        $('#DayDesc_Eng').html(`<b>${BibleReadings[0].DayDescription_Eng}: ${BibleReadings[0].SeasonName_Eng_Full}</b>`);
+        $('#DayDesc_Mal').html(`<b>${BibleReadings[0].DayDescription_Mal}: ${BibleReadings[0].SeasonName_Mal_Full}</b>`);
+        if (BibleReadings[0].Reading1_Mal) {
+            $('#Reading1_Normal').html(`${BibleReadings[0].Reading1_Mal}: ${BibleReadings[0].Reading1_Eng}`);
+        }
+        if (BibleReadings[0].Reading2_Mal) {
+            $('#Reading2_Normal').html(`${BibleReadings[0].Reading2_Mal}: ${BibleReadings[0].Reading2_Eng}`);
+        }
+        if (BibleReadings[0].Reading3_Mal) {
+            $('#Reading3_Normal').html(`${BibleReadings[0].Reading3_Mal}: ${BibleReadings[0].Reading3_Eng}`);
+        }
+        if (BibleReadings[0].ReadingGospal_Mal) {
+            $('#Reading_Gospel_Normal').html(`${BibleReadings[0].ReadingGospal_Mal}: ${BibleReadings[0].ReadingGospal_Eng}`);
+        }
+        if (BibleReadings[1].Reading1_Mal) {
+            $('#FeastDayDescription').html(`<strong>${BibleReadings[1].DayDescription_Eng} | ${BibleReadings[1].DayDescription_Mal}</strong>`);
+        }
+        if (BibleReadings[1].Reading1_Mal) {
+            $('#Reading1_Feast').html(`${BibleReadings[1].Reading1_Mal}: ${BibleReadings[1].Reading1_Eng}`);
+        }
+        if (BibleReadings[1].Reading2_Mal) {
+            $('#Reading2_Feast').html(`${BibleReadings[1].Reading2_Mal}: ${BibleReadings[1].Reading2_Eng}`);
+        }
+        if (BibleReadings[1].Reading3_Mal) {
+            $('#Reading3_Feast').html(`${BibleReadings[1].Reading3_Mal}: ${BibleReadings[1].Reading3_Eng}`);
+        }
+        if (BibleReadings[1].ReadingGospal_Mal) {
+            $('#Reading_Gospel_Feast').html(`${BibleReadings[1].ReadingGospal_Mal}: ${BibleReadings[1].ReadingGospal_Eng}`);
+        }
+
+    }
+
+    function loadVerseOfTheDay() {
+        var BibleQuotes = GetDailyQuotesJSON();
+        console.log(BibleQuotes);
+        $('#VerseEng').html(`${BibleQuotes.Quote_Eng}`);
+        $('#VerseEngChapter').html(`${BibleQuotes.Quote_Eng_Chapter}`);
+        $('#VerseEng2').html(`${BibleQuotes.Quote_Mal}`);
+        $('#VerseEngChapter2').html(`${BibleQuotes.Quote_Mal_Chapter}`);
+
+
+    }
+
     function heroContentSlider() {
         var heroContSlider = $('.hero-content-slider'),
             autoplay = heroContSlider.data('autoplay'),
@@ -769,6 +815,8 @@
     $(document).ready(function () {
         $.when(heroContentSlider()).then(heroContentSliderFade());
         heroSliderOwl();
+        loadReadings();
+        loadVerseOfTheDay()
         progressBars();
         progressCircles();
         teamSlider();

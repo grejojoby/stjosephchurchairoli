@@ -207,9 +207,51 @@
                 </div>
                 <div class="col-md-6 feature-left-stack boxed">
                     <div class="feature-box announcements-box qurbana-timings-box">
-                        <h4 style="padding-bottom: 10px;margin: 0"><strong>Today's Bible Reading</strong></h4>
-                        <div id="SyroCalendar_LiturgicalReadings_Mal">Loading...</div>
-                        <div id="SyroCalendar_LiturgicalReadings_Eng">Loading...</div>
+                        <h4 style="padding-bottom:15px;margin: 0"><strong>Today's Bible Reading</strong></h4>
+                        <h5 style="padding-bottom: 3px;margin: 0;font-size: 16px;" id="DayDesc_Eng"></h5>
+                        <h5 style="padding-bottom: 10px;margin: 0;font-size: 20px;" id="DayDesc_Mal"></h5>
+                        <div id="SyroCalendar_LiturgicalReadings">
+                            <div style="padding-left: 0;">
+                                <div class="panel-group mb0" id="accordion">
+                                    <!-- First Panel -->
+                                    <div class="panel panel-default readings-accordian-panel">
+                                        <div class="panel-heading">
+                                            <button class="panel-title readings-accordian" data-toggle="collapse"
+                                                data-target="#collapse1">
+                                                <h4 class="bold pb10">Normal Day Readings</h4>
+                                            </button>
+                                        </div>
+                                        <div id="collapse1" class="panel-collapse collapse open in">
+                                            <div class="panel-body readings-accordian-body">
+                                                <p class="lead" id="Reading1_Normal"></p>
+                                                <p class="lead" id="Reading2_Normal"></p>
+                                                <p class="lead" id="Reading3_Normal"></p>
+                                                <p class="lead pt10" id="Reading_Gospel_Normal"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Second Panel -->
+                                    <div class="panel panel-default readings-accordian-panel">
+                                        <div class="panel-heading">
+                                            <button class="panel-title readings-accordian collapsed"
+                                                data-toggle="collapse" data-target="#collapse2">
+                                                <h4 class="bold pb10">Feast Day Readings</h4>
+                                            </button>
+                                        </div>
+                                        <div id="collapse2" class="panel-collapse collapse">
+                                            <div class="panel-body readings-accordian-body">
+                                                <h6 id="FeastDayDescription"></h6>
+                                                <p class="lead" id="Reading1_Feast"></p>
+                                                <p class="lead" id="Reading2_Feast"></p>
+                                                <p class="lead" id="Reading3_Feast"></p>
+                                                <p class="lead pt10" id="Reading_Gospel_Feast"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <br>
                         <em>Powered by <a href="https://SyroCalendar.tk" target="_blank">SyroCalendar</a></em>
                     </div>
@@ -234,29 +276,24 @@
                         <div>
                             <h2>
                                 <i class="vossen-quote color"></i>
-                                The LORD is my <strong>light</strong> and my <strong>salvation</strong>;<br> whom shall
-                                I fear?
-
+                                <span id="VerseEng">
+                                    
+                                </span>
                                 <i class="vossen-quote color"></i>
                             </h2>
-                            <p class="label label-primary">Psalm 27:12</p>
+                            <p class="label label-primary" id="VerseEngChapter"></p>
                         </div>
                         <div>
                             <h2>
                                 <i class="vossen-quote color"></i>
-                                Be <strong>strong</strong>, and let your heart take <strong>courage</strong>, <br> all
-                                you who wait for the <strong>LORD!</strong>
+                                <span id="VerseEng2">
+                                    Be <strong>strong</strong>, and let your heart take <strong>courage</strong>, <br>
+                                    all
+                                    you who wait for the <strong>LORD!</strong>
+                                </span>
                                 <i class="vossen-quote color"></i>
                             </h2>
-                            <p class="label label-primary">Psalm 31:24</p>
-                        </div>
-                        <div>
-                            <h2>
-                                <i class="vossen-quote color"></i>
-                                I can do all things through <br> him who <strong>strengthens me.</strong>
-                                <i class="vossen-quote color"></i>
-                            </h2>
-                            <p class="label label-primary">Philippians 4:13</p>
+                            <p class="label label-primary" id="VerseEngChapter2">Psalm 31:24</p>
                         </div>
                     </div>
                 </div>
@@ -495,7 +532,9 @@
     <script src="js/jquery.js"></script>
     <script src="js/init.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
 
+    </script>
 
 </body>
 
