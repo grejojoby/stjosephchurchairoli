@@ -80,6 +80,9 @@
     background-color: transparent;
 }
 
+#VerseEng {
+    font-weight: 500;
+}
 
 @media screen and (max-width: 577px) {
     .cat-teacher-item {

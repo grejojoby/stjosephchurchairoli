@@ -29,7 +29,6 @@
 
     function loadReadings() {
         var BibleReadings = GetLiturgicalReadingsJSON();
-        console.log(BibleReadings[0].DayDescription_Eng);
         $('#DayDesc_Eng').html(`<b>${BibleReadings[0].DayDescription_Eng}: ${BibleReadings[0].SeasonName_Eng_Full}</b>`);
         $('#DayDesc_Mal').html(`<b>${BibleReadings[0].DayDescription_Mal}: ${BibleReadings[0].SeasonName_Mal_Full}</b>`);
         if (BibleReadings[0].Reading1_Mal) {
@@ -64,7 +63,6 @@
 
     function loadVerseOfTheDay() {
         var BibleQuotes = GetDailyQuotesJSON();
-        console.log(BibleQuotes);
         $('#VerseEng').html(`${BibleQuotes.Quote_Eng}`);
         $('#VerseEngChapter').html(`${BibleQuotes.Quote_Eng_Chapter}`);
         $('#VerseEng2').html(`${BibleQuotes.Quote_Mal}`);
