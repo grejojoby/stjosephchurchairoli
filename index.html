@@ -15,6 +15,8 @@
     <link href="css/colors/purple.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700%7CRaleway:400,100,200,300%7CHind:400,300"
         rel="stylesheet" type="text/css">
+    <script src="https://syrocalendar.tk/API/SyroCalendar.min.1.0.2.js"></script>
+
 </head>
 
 <body data-fade-in="true">
@@ -180,27 +182,36 @@
     <section id="announcements" class="pb50">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 feature-left-stack boxed">
-                    <div class="feature-box announcements-box pb140 qurbana-timings-box">
+                <div class="col-md-6 feature-left-stack boxed">
+                    <div class="feature-box announcements-box qurbana-timings-box">
                         <h4 style="padding-bottom: 10px;margin: 0"><strong>Holy Qurbana Timings</strong></h4>
-                        <div class="col-md-6" style="padding-left: 0;">
+                        <div style="padding-left: 0;">
+                            <p class="lead" style="margin-bottom: 0;">Monday, Tuesday, Thursday, Saturday</p>
+                            <h5 style="margin-top: 5px;"><b>Holy Qurbana: 7:00 PM</b></h5>
+                        </div>
+                        <div style="padding-left: 0;">
                             <p class="lead" style="margin-bottom: 0;">Wednesday</p>
                             <h5 style="margin-top: 5px;"><b>Holy Qurbana, Novena of Mother of Perpetual Help: 7:00
                                     PM</b></h5>
                         </div>
-                        <div class="col-md-6" style="padding-left: 0;">
+                        <div style="padding-left: 0;">
                             <p class="lead" style="margin-bottom: 0;">Friday</p>
                             <h5 style="margin-top: 5px;"><b>Holy Qurbana, Novena of St. Joseph: 7:00 PM</b>
                             </h5>
                         </div>
-                        <div class="col-md-6" style="padding-left: 0;">
-                            <p class="lead" style="margin-bottom: 0;">Monday, Tuesday, Thursday, Saturday</p>
-                            <h5 style="margin-top: 5px;"><b>Holy Qurbana: 7:00 PM</b></h5>
-                        </div>
-                        <div class="col-md-6" style="padding-left: 0;">
+                        <div style="padding-left: 0;">
                             <p class="lead" style="margin-bottom: 0;">Sunday</p>
                             <h5 style="margin-top: 5px;"><b>Holy Qurbana: 8:00 AM</b></h5>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-6 feature-left-stack boxed">
+                    <div class="feature-box announcements-box qurbana-timings-box">
+                        <h4 style="padding-bottom: 10px;margin: 0"><strong>Today's Bible Reading</strong></h4>
+                        <div id="SyroCalendar_LiturgicalReadings_Mal">Loading...</div>
+                        <div id="SyroCalendar_LiturgicalReadings_Eng">Loading...</div>
+                        <br>
+                        <em>Powered by <a href="https://SyroCalendar.tk" target="_blank">SyroCalendar</a></em>
                     </div>
                 </div>
             </div>
@@ -484,6 +495,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/init.js"></script>
     <script src="js/scripts.js"></script>
+
 
 </body>
 
