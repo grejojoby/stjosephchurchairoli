@@ -456,7 +456,7 @@ address { font-style: italic; }
 .navbar {
     background: none;
     border: none;
-    float: left;
+    float: right;
     margin-bottom: 0px;
     text-align: left;
 }
@@ -464,7 +464,7 @@ address { font-style: italic; }
     font-size: 15px;
     color: #424242;
     font-weight: bold;
-    padding: 53px 20px 50px 20px;
+    padding: 60px 20px 50px 20px;
     text-transform: uppercase;
 }
 .navbar-nav > li:first-child > a,.wm-main-header .navbar-collapse { padding-left: 0px; }
