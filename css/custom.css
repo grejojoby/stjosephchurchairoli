@@ -1,0 +1,50 @@
+.single-feature:hover .bible-reading-accordion a.active{
+    color: #222;
+}
+.single-feature:hover .bible-reading-accordion a{
+    color: #555;
+}
+.single-feature .bible-reading-accordion a{
+    color: #555;
+}
+
+.bible-reading-accordion>dt>a.active {
+    background: #F9F9FF;
+    color: #555;
+}
+.bible-reading-accordion>dt>a.active::after {
+    background: #F9F9FF;
+    color: #555;
+}
+.bible-reading-accordion>dt>a.active:hover::after {
+    color: #222;
+}
+.qurabana-timing p {
+    color: #555;
+}
+.announcements-box {
+    border-radius: 20px;
+    background-color: #F9F9FF;
+    padding: 40px;
+    margin-top: 20px;    
+}
+
+.annoucements-list li {
+    position: relative;
+    padding-left: 30px;
+    padding-top: 5px;
+    line-height: 1.82em !important
+}
+
+.annoucements-list li:before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 3px solid #555;
+    background: #fff;
+    top: 4px;
+    left: 0;
+    border-radius: 50%;
+    margin-top: 7px;
+}
