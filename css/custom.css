@@ -70,3 +70,7 @@
 .gallery-pill-link.active {
     color: #fff !important;
 }
+
+.bible-reading, .bible-reading dd  {
+    color: #555;
+}
