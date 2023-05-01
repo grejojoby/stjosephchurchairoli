@@ -42,8 +42,8 @@ $(document).ready(function() {
     //------- Datepicker  js --------//  
 
       $( function() {
-        $( "#datepicker" ).datepicker();
-        $( "#datepicker2" ).datepicker();
+        // $( "#datepicker" ).datepicker();
+        // $( "#datepicker2" ).datepicker();
       } );
 
 
@@ -411,11 +411,12 @@ $(document).ready(function() {
             });
         }
     }
+    
 
     //------- Mailchimp js --------//  
 
     $(document).ready(function() {
         $('#mc_embed_signup').find('form').ajaxChimp();
+    
     });
-
 });

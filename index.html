@@ -32,6 +32,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<script src="https://syrocalendar.tk/API/SyroCalendar.min.1.0.2.js"></script>
 </head>
 
 <body>
@@ -99,7 +100,7 @@
 		<div class="overlay overlay-bg"></div>
 		<div class="container">
 			<div class="row fullscreen d-flex align-items-center justify-content-between">
-				<div class="banner-content col-lg-9 col-md-12">
+				<div class="banner-content col-lg-12 col-md-12 text-center">
 					<h1 class="text-uppercase">
 						St. Joseph Church, Airoli
 					</h1>
@@ -142,32 +143,24 @@
 							<h4>Today's Bible Reading</h4>
 						</div>
 						<div class="desc-wrap bible-reading">
-							<p style="margin-top: 2px;margin-bottom:0;font-weight: 700;">Third Tuesday: Season of
-								Resurrection</p>
-							<p style="font-size: larger;font-weight: 700;">മൂന്നാം ചൊവ്വ: ഉയിര്‍പ്പുകാലം</p>
+							<p style="margin-top: 2px;margin-bottom:0;font-weight: 700;" id="DayDescEng"></p>
+							<p style="font-size: larger;font-weight: 700;" id="DayDescMal"></p>
 							<dl class="accordion mt-3 bible-reading-accordion">
 								<dt>
 									<a href="">Normal Reading</a>
 								</dt>
-								<dd>
-									1 തെസ 5:12-22: 1 Thess 5:12-22 <br> മര്‍ക്കോ 4:13-20: Mk 4:13-20
+								<dd id="NormalReading" style="font-weight: 500;margin-bottom: 0;">
+									
 								</dd>
 								<dt>
 									<a href="">Feast Reading</a>
 								</dt>
 								<dd>
+									<p style="font-weight: 600;"><span id="feastNameEng"></span><br><span
+											style="font-size: larger;" id="feastNameMal"></span></p>
 
-									<p style="font-weight: 700;">St. Mark, the Evangelist | <span
-											style="font-size: larger;">വി. മര്‍ക്കോസ് സുവിശേഷകന്‍</span></p>
-
-									<p class="mt-3" style="font-weight: 500;margin-bottom: 0;">ഉത്‌പ 41:39-45: Gen
-										41:39-45</p>
-									<p style="font-weight: 500;margin-bottom: 0;margin-top: 0;">ഉത്‌പ 41:39-45: Gen
-										41:39-45</p>
-									<p style="font-weight: 500;margin-bottom: 0;margin-top: 0;">ഉത്‌പ 41:39-45: Gen
-										41:39-45</p>
-									<p class="mt-3" style="font-weight: 500;margin-bottom: 0;">ഉത്‌പ 41:39-45: Gen
-										41:39-45</p>
+									<p class="mt-3" style="font-weight: 500;margin-bottom: 0;" id="FeastReadings"></p>
+									
 								</dd>
 							</dl>
 						</div>
@@ -240,25 +233,8 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="announcements-box">
-						<ul class="annoucements-list">
-							<li>Lorem ipsum dolor sit amet consectetur, adipisicing
-								elit. Obcaecati excepturi et, dolore ab sed magnam rem quos illum culpa aut beatae
-								fugit eum molestias eveniet? Quis modi quas debitis dolor?</li>
-							<li>Lorem ipsum dolor sit amet consectetur, adipisicing
-								elit. Obcaecati excepturi et, dolore ab sed magnam rem quos illum culpa aut beatae
-								fugit </li>
-							<li>Lorem ipsum dolor sit amet consectetur, adipisicing
-								elit. Obcaecati excepturi et, dolore ab sed magnam rem quos illum culpa aut beatae
-								fugit </li>
-							<li>Lorem ipsum dolor sit amet consectetur, adipisicing
-								elit. Obcaecati excepturi et, dolore ab sed magnam rem quos illum culpa aut beatae
-								fugit </li>
-							<li>Lorem ipsum dolor sit amet consectetur, adipisicing
-								elit. Obcaecati excepturi et, dolore ab sed magnam rem quos illum culpa aut beatae
-								fugit eum molestias eveniet? Quis modi quas debitis dolor?</li>
-							<li>Lorem ipsum dolor sit amet consectetur, adipisicing
-								elit. Obcaecati excepturi et, dolore ab sed magnam rem quos illum culpa aut beatae
-								fugit eum molestias eveniet? Quis modi quas debitis dolor?</li>
+						<ul class="annoucements-list" id="annoucementsList">
+
 						</ul>
 					</div>
 				</div>
@@ -625,7 +601,7 @@
 
 
 		<!-- Start review Area -->
-		<section class="review-area py-5 mt-5 relative">
+		<!-- <section class="review-area py-5 mt-5 relative">
 			<div class="overlay overlay-bg"></div>
 			<div class="container">
 				<div class="row">
@@ -802,11 +778,11 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!-- End review Area -->
 
 		<!-- Start cta-one Area -->
-		<section class="cta-one-area relative section-gap">
+		<!-- <section class="cta-one-area relative section-gap">
 			<div class="container">
 				<div class="overlay overlay-bg"></div>
 				<div class="row justify-content-center">
@@ -822,11 +798,11 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!-- End cta-one Area -->
 
 		<!-- Start blog Area -->
-		<section class="blog-area section-gap" id="blog">
+		<!-- <section class="blog-area section-gap" id="blog">
 			<div class="container">
 				<div class="row d-flex justify-content-center">
 					<div class="menu-content pb-70 col-lg-8">
@@ -893,7 +869,7 @@
 							<h5>Video Games Playing With Imagination</h5>
 						</a>
 						<p>
-							About 64% of all on-line teens say that do things online that they wouldn’t want their
+							About 64% of all on-line teens say that do things online that they wouldn't want their
 							parents
 							to know about. 11% of all adult internet
 						</p>
@@ -902,12 +878,12 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!-- End blog Area -->
 
 
 		<!-- Start cta-two Area -->
-		<section class="cta-two-area">
+		<!-- <section class="cta-two-area">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8 cta-left">
@@ -918,7 +894,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!-- End cta-two Area -->
 
 		<!-- start footer Area -->
@@ -997,10 +973,9 @@
 					<p class="footer-text m-0 col-lg-6 col-md-12">
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i
-							class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
-							target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com"
-							target="_blank">ThemeWagon</a>
+						<script>document.write(new Date().getFullYear());</script> St. Joseph Church, Airoli | Developed by <a href="https://grejo.in"
+							target="_blank">Grejo Joby</a> &amp; contributed by <a aria-disabled="true"
+							target="_blank">Mathew George</a>
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</p>
 					<div class="col-lg-6 col-sm-12 footer-social">
@@ -1020,7 +995,7 @@
 			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
 			crossorigin="anonymous"></script>
 		<script src="js/vendor/bootstrap.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+		<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script> -->
 		<script src="js/easing.min.js"></script>
 		<script src="js/hoverIntent.js"></script>
 		<script src="js/superfish.min.js"></script>
@@ -1031,6 +1006,103 @@
 		<script src="js/owl.carousel.min.js"></script>
 		<script src="js/mail-script.js"></script>
 		<script src="js/main.js"></script>
+		<script>
+			$(document).ready(function () {
+				function loadAnnouncements() {
+					const announcementslist = $('#annoucementsList')[0]
+					if (!announcementslist) return;
+
+					let responseData;
+					const fetchData = async (url) => {
+						try {
+							const response = await fetch(url);
+
+							if (!response.ok) {
+								throw new Error(`HTTP error! Status: ${response.status}`);
+							}
+
+							const data = await response.json();
+							onSuccess(data.data.annoucements[0]);
+						} catch (error) {
+							console.error('Error fetching data:', error);
+						}
+					};
+
+					const formatDate = (dateString) => {
+						const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+						const date = new Date(dateString);
+						const day = date.getDate();
+						const month = months[date.getMonth()];
+						const year = date.getFullYear();
+
+						return `${day} ${month}, ${year}`;
+					};
+
+					const onSuccess = (data) => {
+
+						document.getElementById('annoucementUpdateDate').innerHTML = formatDate(data.date);
+						for (let l of data.text) {
+							const li = document.createElement("li");
+							li.innerText = l;
+							announcementslist.appendChild(li);
+						}
+					};
+
+					const apiUrl = 'https://api-ap-south-1.hygraph.com/v2/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20MyQuery%20%7B%0A%20%20annoucements(last%3A%201)%20%7B%0A%20%20%20%20id%0A%20%20%20%20date%0A%20%20%20%20text%0A%20%20%7D%0A%7D%0A&operationName=MyQuery';
+					fetchData(apiUrl);
+
+				}
+
+				function loadReadings() {
+					var BibleReadings = GetLiturgicalReadingsJSON();
+					console.log(BibleReadings)
+					$('#DayDescEng').html(`${BibleReadings[0].DayDescription_Eng}: ${BibleReadings[0].SeasonName_Eng_Full}`);
+					$('#DayDescMal').html(`${BibleReadings[0].DayDescription_Mal}: ${BibleReadings[0].SeasonName_Mal_Full}`);
+					if (BibleReadings[0].Reading1_Mal) {
+						$('#NormalReading').append(`${BibleReadings[0].Reading1_Mal}: ${BibleReadings[0].Reading1_Eng}<br> `);
+					}
+					if (BibleReadings[0].Reading2_Mal) {
+						$('#NormalReading').append(`${BibleReadings[0].Reading2_Mal}: ${BibleReadings[0].Reading2_Eng}<br> `);
+					}
+					if (BibleReadings[0].Reading3_Mal) {
+						$('#NormalReading').append(`${BibleReadings[0].Reading3_Mal}: ${BibleReadings[0].Reading3_Eng}<br> `);
+					}
+					if (BibleReadings[0].ReadingGospal_Mal) {
+						$('#NormalReading').append(`${BibleReadings[0].ReadingGospal_Mal}: ${BibleReadings[0].ReadingGospal_Eng}<br> `);
+					}
+
+					$('#feastNameEng').html(`${BibleReadings[1].DayDescription_Eng}`);
+					$('#feastNameMal').html(`${BibleReadings[1].DayDescription_Mal}`);
+
+					if (BibleReadings[1].Reading1_Mal) {
+						$('#FeastReadings').append(`${BibleReadings[1].Reading1_Mal}: ${BibleReadings[1].Reading1_Eng}<br> `);
+					}
+					if (BibleReadings[1].Reading2_Mal) {
+						$('#FeastReadings').append(`${BibleReadings[1].Reading2_Mal}: ${BibleReadings[1].Reading2_Eng}<br> `);
+					}
+					if (BibleReadings[1].Reading3_Mal) {
+						$('#FeastReadings').append(`${BibleReadings[1].Reading3_Mal}: ${BibleReadings[1].Reading3_Eng}<br> `);
+					}
+					if (BibleReadings[1].ReadingGospal_Mal) {
+						$('#FeastReadings').append(`${BibleReadings[1].ReadingGospal_Mal}: ${BibleReadings[1].ReadingGospal_Eng}<br> `);
+					}
+				}
+
+				function loadVerseOfTheDay() {
+					// var BibleQuotes = GetDailyQuotesJSON();
+					// $('#VerseEng').html(`${BibleQuotes.Quote_Eng}`);
+					// $('#VerseEngChapter').html(`${BibleQuotes.Quote_Eng_Chapter}`);
+					// $('#VerseEng2').html(`${BibleQuotes.Quote_Mal}`);
+					// $('#VerseEngChapter2').html(`${BibleQuotes.Quote_Mal_Chapter}`);
+
+
+				}
+				loadAnnouncements();
+				loadReadings();
+				loadVerseOfTheDay();
+
+			});
+		</script>
 </body>
 
 </html>
