@@ -724,7 +724,7 @@ th {
 }
 
 .relative {
-    position: relative
+    position: relative;
 }
 
 .overflow-hidden {
@@ -3859,11 +3859,16 @@ dl.toggle.time-line:before {
 }
 
 .gallery-area .single-imgs {
-    margin-bottom: 30px
+    padding-bottom: 30px;
+    height: 100%;
+    max-height: 300px;
 }
 
 .gallery-area .single-imgs img {
-    width: 100%
+    height: 100%;
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
 }
 
 .gallery-area .single-imgs .overlay-bg {
@@ -3873,7 +3878,9 @@ dl.toggle.time-line:before {
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    z-index: 2
+    z-index: 2;
+    margin-bottom: 30px;
+    max-height: 300px;
 }
 
 .gallery-area .single-imgs:hover .overlay-bg {

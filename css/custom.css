@@ -78,3 +78,7 @@
 .bg-grey {
     background-color: #F9F9FF;
 }
+
+.single-imgs > div > img {
+    object-fit: cover;
+}
