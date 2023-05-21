@@ -98,12 +98,11 @@ $(document).ready(function () {
     $('.active-popular-carusel').owlCarousel({
         items: 6,
         margin: 15,
-        loop: false,
-        dots: false,
+        loop: true,
+        dots: true,
         autoplayHoverPause: true,
         smartSpeed: 650,
-        autoplay: false,
-        scrollY: 0,
+        autoplay: true,
         responsive: {
             0: {
                 items: 2
@@ -115,7 +114,7 @@ $(document).ready(function () {
                 items: 4,
             },
             992: {
-                items: 6
+                items: 4
             }
         }
     });
