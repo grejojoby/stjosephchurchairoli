@@ -2069,9 +2069,15 @@ h6 {
 }
 
 .main-menu {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-top: 20px;
     border-bottom: 1px solid #39353e
+}
+@media screen and (min-width: 500px) {
+    .main-menu {
+        padding-bottom: 3px;
+        padding-top: 3px;
+    }
 }
 
 #header {
@@ -3863,7 +3869,6 @@ dl.toggle.time-line:before {
     height: 100%;
     max-height: 300px;
     min-height: 250px;
-    min-width: 350px;
 }
 
 .gallery-area .single-imgs img {
@@ -3872,7 +3877,6 @@ dl.toggle.time-line:before {
     max-height: 300px;
     min-height: 250px;
     object-fit: cover;
-    min-width: 350px;
 }
 
 .gallery-area .single-imgs .overlay-bg {
@@ -3886,7 +3890,6 @@ dl.toggle.time-line:before {
     margin-bottom: 30px;
     max-height: 300px;
     min-height: 250px;
-    min-width: 350px;
 }
 
 .gallery-area .single-imgs:hover .overlay-bg {
