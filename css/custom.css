@@ -82,3 +82,13 @@
 .single-imgs > div > img {
     object-fit: cover;
 }
+
+.unit-name {
+    font-size: 100%;
+    padding-top: 10px;
+    text-align: center;
+}
+.footer-area {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
