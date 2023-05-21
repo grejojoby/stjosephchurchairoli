@@ -39,14 +39,6 @@ $(document).ready(function () {
         fixedContentPos: false
     });
 
-    //------- Datepicker  js --------//  
-
-    $(function () {
-        // $( "#datepicker" ).datepicker();
-        // $( "#datepicker2" ).datepicker();
-    });
-
-
     //------- Superfist nav menu  js --------//  
 
     $('.nav-menu').superfish({
