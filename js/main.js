@@ -24,12 +24,12 @@ $(document).ready(function () {
 
     //------- Lightbox  js --------//  
 
-    $('.img-gal').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true
-        }
-    });
+    // $('.img-gal').magnificPopup({
+    //     type: 'image',
+    //     gallery: {
+    //         enabled: true
+    //     }
+    // });
 
     $('.play-btn').magnificPopup({
         type: 'iframe',

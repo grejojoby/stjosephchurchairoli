@@ -29,6 +29,7 @@
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/lightbox.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/custom.css">
 	<script src="https://syrocalendar.tk/API/SyroCalendar.min.1.0.2.js"></script>
@@ -362,7 +363,7 @@
 				</div>
 				<script>
 					var galleryData = []
-					url = "https://ap-south-1.cdn.hygraph.com/content/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20Assets%20%7B%0A%20%20galleries(orderBy%3A%20year_DESC%2C%20first%3A%201000)%20%7B%0A%20%20%20%20year%0A%20%20%20%20tags%0A%20%20%20%20imageFile%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&operationName=Assets"
+					url = "https://ap-south-1.cdn.hygraph.com/content/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20Assets%20%7B%0A%20%20galleries(orderBy%3A%20year_DESC%2C%20first%3A%201000)%20%7B%0A%20%20%20%20year%0A%20%20%20%20tags%0A%20%20%20%20imageFile%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20caption%0A%20%20%7D%0A%7D%0A&operationName=Assets"
 					async function getImagesFromCMS() {
 						const reps = await fetch(url);
 						var data = await reps.json();
@@ -392,7 +393,7 @@
 							}
 							document.getElementById(`gallery-pill-row-${el.year}`).innerHTML += `
 								<div class="col-lg-4">
-									<a href="${el.imageFile.url}" class="img-gal">
+									<a href="${el.imageFile.url}" class="img-gal" data-lightbox="gallery-home" data-title="${el.caption}">
 										<div class="single-imgs relative">
 											<div class="overlay overlay-bg"></div>
 											<img class="img-fluid" src="${el.imageFile.url}"
@@ -495,6 +496,7 @@
 	<script src="js/jquery.tabs.min.js"></script>
 	<script src="js/jquery.nice-select.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/lightbox.min.js"></script>
 	<script src="js/mail-script.js"></script>
 	<script src="js/main.js"></script>
 	<script>
