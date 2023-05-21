@@ -2069,9 +2069,15 @@ h6 {
 }
 
 .main-menu {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-top: 20px;
     border-bottom: 1px solid #39353e
+}
+@media screen and (min-width: 500px) {
+    .main-menu {
+        padding-bottom: 3px;
+        padding-top: 3px;
+    }
 }
 
 #header {
