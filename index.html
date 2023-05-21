@@ -105,7 +105,7 @@
 	<!-- Start feature Area -->
 	<section class="feature-area">
 		<div class="container">
-			<div class="row">
+			<div class="row justify-content-center">
 				<div class="col-lg-6">
 					<div class="single-feature">
 						<div class="title">
@@ -125,7 +125,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6">
+				<div class="col-lg-6" id="bibleReadingBlock">
 					<div class="single-feature">
 						<div class="title">
 							<h4>Today's Bible Reading</h4>
@@ -140,10 +140,10 @@
 								<dd id="NormalReading" style="font-weight: 500;margin-bottom: 0;">
 
 								</dd>
-								<dt>
+								<dt id="feastReadingsSection">
 									<a href="">Feast Reading</a>
 								</dt>
-								<dd>
+								<dd id="feastReadingsDescSection">
 									<p style="font-weight: 600;"><span id="feastNameEng"></span><br><span
 											style="font-size: larger;" id="feastNameMal"></span></p>
 
@@ -247,6 +247,21 @@
 						<div class="thumb-wrap relative">
 							<div class="thumb relative">
 								<div class="overlay overlay-bg"></div>
+								<img class="img-fluid" src="img/saints/st-alphonsa.jpg" alt="St. Alphonsa Photo">
+							</div>
+						</div>
+						<div class="details">
+							<a href="#">
+								<h4>
+									St. Alphonsa Unit
+								</h4>
+							</a>
+						</div>
+					</div>
+					<div class="single-popular-carusel">
+						<div class="thumb-wrap relative">
+							<div class="thumb relative">
+								<div class="overlay overlay-bg"></div>
 								<img class="img-fluid" src="img/saints/st-euphraisa.jpg" alt="St. Euphresia Photo">
 							</div>
 						</div>
@@ -338,154 +353,61 @@
 			<div class="container">
 				<div class="row justify-content-center my-3">
 					<ul class="nav nav-pills mb-3 gallery-pill-row" id="pills-tab" role="tablist">
-						<li class="nav-item">
-							<a class="nav-link gallery-pill-link active" id="pills-2023-tab" data-toggle="pill"
-								href="#pills-2023" role="tab" aria-controls="pills-2023" aria-selected="true">2023</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link gallery-pill-link" id="pills-2022-tab" data-toggle="pill"
-								href="#pills-2022" role="tab" aria-controls="pills-2022" aria-selected="false">2022</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link gallery-pill-link" id="pills-2019-tab" data-toggle="pill"
-								href="#pills-2019" role="tab" aria-controls="pills-2019" aria-selected="false">2019</a>
-						</li>
+
 					</ul>
 				</div>
 				<div class="row tab-content" id="pills-tabContent">
-					<div class="tab-pane fade show active" id="pills-2023" role="tabpanel"
-						aria-labelledby="pills-2023-tab">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-4">
-									<a href="img/gallery/2023/2023_Easter_1.webp" class="img-gal">
-										<div class="single-imgs relative">
-											<div class="overlay overlay-bg"></div>
-											<img class="img-fluid" src="img/gallery/2023/2023_Easter_1.webp" alt="">
-										</div>
-									</a>
-								</div>
-								<div class="col-lg-4">
-									<a href="img/gallery/2023/2023_Mahatheerthadanam.webp" class="img-gal">
-										<div class="single-imgs relative">
-											<div class="overlay overlay-bg"></div>
-											<img class="img-fluid" src="img/gallery/2023/2023_Mahatheerthadanam.webp"
-												alt="">
-										</div>
-									</a>
-								</div>
-								<div class="col-lg-4">
-									<a href="img/gallery/2023/2023_ParishPicnic_1.webp" class="img-gal">
-										<div class="single-imgs relative">
-											<div class="overlay overlay-bg"></div>
-											<img class="img-fluid" src="img/gallery/2023/2023_ParishPicnic_1.webp"
-												alt="">
-										</div>
-									</a>
-								</div>
-								<div class="col-lg-4">
-									<a href="img/gallery/2023/2023_ParishPicnic_2.webp" class="img-gal">
-										<div class="single-imgs relative">
-											<div class="overlay overlay-bg"></div>
-											<img class="img-fluid" src="img/gallery/2023/2023_ParishPicnic_2.webp"
-												alt="">
-										</div>
-									</a>
-								</div>
-								<div class="col-lg-4">
-									<a href="img/gallery/2023/2023_ParishPicnic_3.webp" class="img-gal">
-										<div class="single-imgs relative">
-											<div class="overlay overlay-bg"></div>
-											<img class="img-fluid" src="img/gallery/2023/2023_ParishPicnic_3.webp"
-												alt="">
-										</div>
-									</a>
-								</div>
-								<div class="col-lg-4">
-									<a href="img/gallery/2023/2023_YouthDay_1.webp" class="img-gal">
-										<div class="single-imgs relative">
-											<div class="overlay overlay-bg"></div>
-											<img class="img-fluid" src="img/gallery/2023/2023_YouthDay_1.webp" alt="">
-										</div>
-									</a>
-								</div>
 
-							</div>
-						</div>
-					</div>
-					<div class="tab-pane fade" id="pills-2022" role="tabpanel" aria-labelledby="pills-2022-tab">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-4">
-									<a href="img/gallery/2022/2022_Onam_1.webp" class="img-gal">
-										<div class="single-imgs relative">
-											<div class="overlay overlay-bg"></div>
-											<img class="img-fluid" src="img/gallery/2022/2022_Onam_1.webp" alt="">
-										</div>
-									</a>
-								</div>
-								<div class="col-lg-4">
-									<a href="img/gallery/2022/2022_ParishFeast_1.webp" class="img-gal">
-										<div class="single-imgs relative">
-											<div class="overlay overlay-bg"></div>
-											<img class="img-fluid" src="img/gallery/2022/2022_ParishFeast_1.webp"
-												alt="">
-										</div>
-									</a>
-								</div>
-								<div class="col-lg-4">
-									<a href="img/gallery/2022/2022_ParishFeast_2.webp" class="img-gal">
-										<div class="single-imgs relative">
-											<div class="overlay overlay-bg"></div>
-											<img class="img-fluid" src="img/gallery/2022/2022_ParishFeast_2.webp"
-												alt="">
-										</div>
-									</a>
-								</div>
-								<div class="col-lg-4">
-									<a href="img/gallery/2022/2022_TugOfWar_1.webp" class="img-gal">
-										<div class="single-imgs relative">
-											<div class="overlay overlay-bg"></div>
-											<img class="img-fluid" src="img/gallery/2022/2022_TugOfWar_1.webp" alt="">
-										</div>
-									</a>
-								</div>
-								<div class="col-lg-4">
-									<a href="img/gallery/2022/2022_TugOfWar_2.webp" class="img-gal">
-										<div class="single-imgs relative">
-											<div class="overlay overlay-bg"></div>
-											<img class="img-fluid" src="img/gallery/2022/2022_TugOfWar_2.webp" alt="">
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="tab-pane fade" id="pills-2019" role="tabpanel" aria-labelledby="pills-2019-tab">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-4">
-									<a href="img/gallery/2019/2019_StJosephFeast_1.webp" class="img-gal">
-										<div class="single-imgs relative">
-											<div class="overlay overlay-bg"></div>
-											<img class="img-fluid" src="img/gallery/2019/2019_StJosephFeast_1.webp"
-												alt="">
-										</div>
-									</a>
-								</div>
-								<div class="col-lg-4">
-									<a href="img/gallery/2019/2019_StJosephFeast_2.webp" class="img-gal">
-										<div class="single-imgs relative">
-											<div class="overlay overlay-bg"></div>
-											<img class="img-fluid" src="img/gallery/2019/2019_StJosephFeast_2.webp"
-												alt="">
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
+				<script>
+					var galleryData = []
+					url = "https://ap-south-1.cdn.hygraph.com/content/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20Assets%20%7B%0A%20%20galleries(orderBy%3A%20year_DESC%2C%20first%3A%201000)%20%7B%0A%20%20%20%20year%0A%20%20%20%20tags%0A%20%20%20%20imageFile%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&operationName=Assets"
+					async function getImagesFromCMS() {
+						const reps = await fetch(url);
+						var data = await reps.json();
+						data = (data.data.galleries);
+
+						for (var i = 0; i < data.length; i++) {
+							galleryData.push(data[i])
+						}
+						let galleryYears = []
+						for (let index = 0; index < galleryData.length; index++) {
+							const el = galleryData[index];
+							if (!galleryYears.includes(el.year)) {
+								galleryYears.push(el.year);
+								document.getElementById('pills-tab').innerHTML += `
+									<li class="nav-item">
+										<a class="nav-link gallery-pill-link" id="pills-${el.year}-tab" data-toggle="pill"
+											href="#pills-${el.year}" role="tab" aria-controls="pills-${el.year}" aria-selected="false">${el.year}</a>
+									</li>`;
+								document.getElementById('pills-tabContent').innerHTML += `
+									<div class="tab-pane fade" id="pills-${el.year}" role="tabpanel" aria-labelledby="pills-${el.year}-tab">
+										<div class="container">
+											<div class="row" id="gallery-pill-row-${el.year}">
+											
+											</div>
+										</div>
+									</div>`;
+							}
+							document.getElementById(`gallery-pill-row-${el.year}`).innerHTML += `
+								<div class="col-lg-4">
+									<a href="${el.imageFile.url}" class="img-gal">
+										<div class="single-imgs relative">
+											<div class="overlay overlay-bg"></div>
+											<img class="img-fluid" src="${el.imageFile.url}"
+											alt="">
+										</div>
+									</a>
+								</div>
+							`;
+							let tabpills = document.getElementsByClassName('gallery-pill-link');
+							tabpills[0].classList.add("active")
+							let tabpanes = document.getElementsByClassName('tab-pane');
+							tabpanes[0].classList.add("show", "active")
+						}
+					}
+					getImagesFromCMS();
+				</script>
 			</div>
 		</section>
 	</section>
@@ -643,36 +565,43 @@
 
 			function loadReadings() {
 				var BibleReadings = GetLiturgicalReadingsJSON();
-				console.log(BibleReadings)
-				$('#DayDescEng').html(`${BibleReadings[0].DayDescription_Eng}: ${BibleReadings[0].SeasonName_Eng_Full}`);
-				$('#DayDescMal').html(`${BibleReadings[0].DayDescription_Mal}: ${BibleReadings[0].SeasonName_Mal_Full}`);
-				if (BibleReadings[0].Reading1_Mal) {
-					$('#NormalReading').append(`${BibleReadings[0].Reading1_Mal}: ${BibleReadings[0].Reading1_Eng}<br> `);
-				}
-				if (BibleReadings[0].Reading2_Mal) {
-					$('#NormalReading').append(`${BibleReadings[0].Reading2_Mal}: ${BibleReadings[0].Reading2_Eng}<br> `);
-				}
-				if (BibleReadings[0].Reading3_Mal) {
-					$('#NormalReading').append(`${BibleReadings[0].Reading3_Mal}: ${BibleReadings[0].Reading3_Eng}<br> `);
-				}
-				if (BibleReadings[0].ReadingGospal_Mal) {
-					$('#NormalReading').append(`${BibleReadings[0].ReadingGospal_Mal}: ${BibleReadings[0].ReadingGospal_Eng}<br> `);
-				}
+				if (Array.isArray(BibleReadings)) {
+					$('#DayDescEng').html(`${BibleReadings[0].DayDescription_Eng}: ${BibleReadings[0].SeasonName_Eng_Full}`);
+					$('#DayDescMal').html(`${BibleReadings[0].DayDescription_Mal}: ${BibleReadings[0].SeasonName_Mal_Full}`);
+					if (BibleReadings[0].Reading1_Mal) {
+						$('#NormalReading').append(`${BibleReadings[0].Reading1_Mal}: ${BibleReadings[0].Reading1_Eng}<br> `);
+					}
+					if (BibleReadings[0].Reading2_Mal) {
+						$('#NormalReading').append(`${BibleReadings[0].Reading2_Mal}: ${BibleReadings[0].Reading2_Eng}<br> `);
+					}
+					if (BibleReadings[0].Reading3_Mal) {
+						$('#NormalReading').append(`${BibleReadings[0].Reading3_Mal}: ${BibleReadings[0].Reading3_Eng}<br> `);
+					}
+					if (BibleReadings[0].ReadingGospal_Mal) {
+						$('#NormalReading').append(`${BibleReadings[0].ReadingGospal_Mal}: ${BibleReadings[0].ReadingGospal_Eng}<br> `);
+					}
+					if (BibleReadings.length > 1) {
+						$('#feastNameEng').html(`${BibleReadings[1].DayDescription_Eng}`);
+						$('#feastNameMal').html(`${BibleReadings[1].DayDescription_Mal}`);
 
-				$('#feastNameEng').html(`${BibleReadings[1].DayDescription_Eng}`);
-				$('#feastNameMal').html(`${BibleReadings[1].DayDescription_Mal}`);
-
-				if (BibleReadings[1].Reading1_Mal) {
-					$('#FeastReadings').append(`${BibleReadings[1].Reading1_Mal}: ${BibleReadings[1].Reading1_Eng}<br> `);
-				}
-				if (BibleReadings[1].Reading2_Mal) {
-					$('#FeastReadings').append(`${BibleReadings[1].Reading2_Mal}: ${BibleReadings[1].Reading2_Eng}<br> `);
-				}
-				if (BibleReadings[1].Reading3_Mal) {
-					$('#FeastReadings').append(`${BibleReadings[1].Reading3_Mal}: ${BibleReadings[1].Reading3_Eng}<br> `);
-				}
-				if (BibleReadings[1].ReadingGospal_Mal) {
-					$('#FeastReadings').append(`${BibleReadings[1].ReadingGospal_Mal}: ${BibleReadings[1].ReadingGospal_Eng}<br> `);
+						if (BibleReadings[1].Reading1_Mal) {
+							$('#FeastReadings').append(`${BibleReadings[1].Reading1_Mal}: ${BibleReadings[1].Reading1_Eng}<br> `);
+						}
+						if (BibleReadings[1].Reading2_Mal) {
+							$('#FeastReadings').append(`${BibleReadings[1].Reading2_Mal}: ${BibleReadings[1].Reading2_Eng}<br> `);
+						}
+						if (BibleReadings[1].Reading3_Mal) {
+							$('#FeastReadings').append(`${BibleReadings[1].Reading3_Mal}: ${BibleReadings[1].Reading3_Eng}<br> `);
+						}
+						if (BibleReadings[1].ReadingGospal_Mal) {
+							$('#FeastReadings').append(`${BibleReadings[1].ReadingGospal_Mal}: ${BibleReadings[1].ReadingGospal_Eng}<br> `);
+						}
+					} else {
+						document.getElementById('feastReadingsSection').remove();
+						document.getElementById('feastReadingsDescSection').remove();
+					}
+				} else {
+					document.getElementById('bibleReadingBlock').remove();
 				}
 			}
 
@@ -691,6 +620,7 @@
 
 		});
 	</script>
+
 </body>
 
 </html>
