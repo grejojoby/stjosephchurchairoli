@@ -121,3 +121,11 @@
     width: 70%;
     margin: auto;
 }
+
+#home p {
+    color: #ddd;
+}
+
+.footer-text {
+    color: #888;
+}
