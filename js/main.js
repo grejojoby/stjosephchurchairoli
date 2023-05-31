@@ -24,12 +24,12 @@ $(document).ready(function () {
 
     //------- Lightbox  js --------//  
 
-    $('.img-gal').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true
-        }
-    });
+    // $('.img-gal').magnificPopup({
+    //     type: 'image',
+    //     gallery: {
+    //         enabled: true
+    //     }
+    // });
 
     $('.play-btn').magnificPopup({
         type: 'iframe',
@@ -38,14 +38,6 @@ $(document).ready(function () {
         preloader: false,
         fixedContentPos: false
     });
-
-    //------- Datepicker  js --------//  
-
-    $(function () {
-        // $( "#datepicker" ).datepicker();
-        // $( "#datepicker2" ).datepicker();
-    });
-
 
     //------- Superfist nav menu  js --------//  
 
@@ -98,12 +90,11 @@ $(document).ready(function () {
     $('.active-popular-carusel').owlCarousel({
         items: 6,
         margin: 15,
-        loop: false,
-        dots: false,
+        loop: true,
+        dots: true,
         autoplayHoverPause: true,
         smartSpeed: 650,
-        autoplay: false,
-        scrollY: 0,
+        autoplay: true,
         responsive: {
             0: {
                 items: 2
@@ -115,7 +106,7 @@ $(document).ready(function () {
                 items: 4,
             },
             992: {
-                items: 6
+                items: 4
             }
         }
     });
