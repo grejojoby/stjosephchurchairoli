@@ -2048,13 +2048,13 @@ h6 {
     margin-right: 10px
 }
 
-.header-top .header-top-right a .lnr {
+.header-top .header-top-right a .fa {
     display: none;
     font-weight: 700
 }
 
 @media (max-width: 480px) {
-    .header-top .header-top-right a .lnr {
+    .header-top .header-top-right a .fa {
         display: inline-block
     }
 
@@ -2653,7 +2653,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-bottom: 0px
 }
 
-.single-popular-carusel .meta p .lnr {
+.single-popular-carusel .meta p .fa {
     margin: 0px 5px
 }
 
@@ -2987,7 +2987,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     display: flex
 }
 
-.single-blog .details-btn .lnr {
+.single-blog .details-btn .fa {
     color: #222;
     line-height: inherit
 }
@@ -3095,7 +3095,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 14px
 }
 
-.about-content .lnr {
+.about-content .fa {
     margin: 0px 10px;
     font-weight: 600
 }
@@ -3827,11 +3827,11 @@ dl.toggle.time-line:before {
     color: #fff
 }
 
-.event-details-area .social-nav .navs .nav-prev .lnr {
+.event-details-area .social-nav .navs .nav-prev .fa {
     margin-right: 5px
 }
 
-.event-details-area .social-nav .navs .nav-next .lnr {
+.event-details-area .social-nav .navs .nav-next .fa {
     margin-left: 5px
 }
 
@@ -4068,10 +4068,10 @@ dl.toggle.time-line:before {
     color: #f7631b
 }
 
-.post-content-area .single-post .user-name .lnr,
-.post-content-area .single-post .date .lnr,
-.post-content-area .single-post .view .lnr,
-.post-content-area .single-post .comments .lnr {
+.post-content-area .single-post .user-name .fa,
+.post-content-area .single-post .date .fa,
+.post-content-area .single-post .view .fa,
+.post-content-area .single-post .comments .fa {
     font-weight: 900;
     color: #222
 }
@@ -4148,7 +4148,7 @@ dl.toggle.time-line:before {
     border: none
 }
 
-.blog-pagination .page-link .lnr {
+.blog-pagination .page-link .fa {
     font-weight: 600
 }
 
@@ -4500,7 +4500,7 @@ dl.toggle.time-line:before {
     position: absolute
 }
 
-.single-post-area .arrow .lnr {
+.single-post-area .arrow .fa {
     font-size: 20px;
     font-weight: 600
 }
@@ -4530,7 +4530,7 @@ dl.toggle.time-line:before {
     transition: all 0.3s ease 0s
 }
 
-.single-post-area .navigation-area .nav-left .lnr {
+.single-post-area .navigation-area .nav-left .fa {
     margin-left: 20px;
     opacity: 0;
     -webkit-transition: all 0.3s ease 0s;
@@ -4539,7 +4539,7 @@ dl.toggle.time-line:before {
     transition: all 0.3s ease 0s
 }
 
-.single-post-area .navigation-area .nav-left:hover .lnr {
+.single-post-area .navigation-area .nav-left:hover .fa {
     opacity: 1
 }
 
@@ -4569,7 +4569,7 @@ dl.toggle.time-line:before {
     transition: all 0.3s ease 0s
 }
 
-.single-post-area .navigation-area .nav-right .lnr {
+.single-post-area .navigation-area .nav-right .fa {
     margin-right: 20px;
     opacity: 0;
     -webkit-transition: all 0.3s ease 0s;
@@ -4578,7 +4578,7 @@ dl.toggle.time-line:before {
     transition: all 0.3s ease 0s
 }
 
-.single-post-area .navigation-area .nav-right:hover .lnr {
+.single-post-area .navigation-area .nav-right:hover .fa {
     opacity: 1
 }
 
@@ -4831,7 +4831,7 @@ dl.toggle.time-line:before {
     margin-bottom: 5px
 }
 
-.contact-page-area .address-wrap .single-contact-address .lnr {
+.contact-page-area .address-wrap .single-contact-address .fa {
     font-size: 30px;
     font-weight: 500;
     color: #f7631b;
@@ -4911,7 +4911,7 @@ dl.toggle.time-line:before {
     color: #fff
 }
 
-.single-footer-widget .btn .lnr {
+.single-footer-widget .btn .fa {
     line-height: inherit;
     font-size: 13px;
     padding: 0px 4px
@@ -4975,7 +4975,7 @@ dl.toggle.time-line:before {
     }
 }
 
-.footer-bottom .lnr,
+.footer-bottom .fa,
 .footer-bottom a {
     color: #f7631b
 }
