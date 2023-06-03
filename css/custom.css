@@ -170,3 +170,8 @@
 /* .org-grid img {
     border-radius: 100%;
 } */
+
+.header-bar-logo {
+    height: 70px;
+    padding: 10px;
+}
