@@ -54,11 +54,10 @@
     border-radius: 50%;
     margin-top: 7px;
 }
-.gallery-pill {
-    
-}
 
-.gallery-pill-row  .gallery-pill-link.active,
+.gallery-pill {}
+
+.gallery-pill-row .gallery-pill-link.active,
 .gallery-pill-row .show>.gallery-pill-link {
     background-color: #f7631b !important;
 
@@ -67,11 +66,13 @@
 .gallery-pill-link {
     color: #f7631b !important;
 }
+
 .gallery-pill-link.active {
     color: #fff !important;
 }
 
-.bible-reading, .bible-reading dd  {
+.bible-reading,
+.bible-reading dd {
     color: #555;
 }
 
@@ -79,7 +80,7 @@
     background-color: #F9F9FF;
 }
 
-.single-imgs > div > img {
+.single-imgs>div>img {
     object-fit: cover;
 }
 
@@ -88,10 +89,12 @@
     padding-top: 10px;
     text-align: center;
 }
+
 .footer-area {
     padding-top: 70px;
     padding-bottom: 40px;
 }
+
 .quick-links-container {
     display: flex;
     flex-direction: column;
@@ -111,12 +114,14 @@
     width: 60%;
 }
 
-.quick-links-item:hover{
+.quick-links-item:hover {
     color: #fff;
 }
+
 .unit-grid img {
     width: 100%;
 }
+
 .unit-grid {
     width: 70%;
     margin: auto;
@@ -129,3 +134,39 @@
 .footer-text {
     color: #888;
 }
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.unit-row {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.unit-box {
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 20px 40px;
+    width: 50vw;
+}
+
+@media screen and (max-width: 768px) {
+    .unit-box {
+        width: 80vw;
+    }
+    .unit-grid {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+.unit-grid p {
+    color: #555;
+    font-weight: 500;
+    font-size: small;
+}
+
+/* .org-grid img {
+    border-radius: 100%;
+} */
