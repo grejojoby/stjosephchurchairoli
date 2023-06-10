@@ -4,13 +4,15 @@
 <head>
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<!-- Author Meta -->
 	<meta name="author" content="Grejo Joby">
 	<!-- Meta Description -->
-	<meta name="description" content="Syro Malabar Catholic Church affliated with Diocese of Kalyan. We are a parish situated in the locality of Airoli, Navi Mumbai.">
+	<meta name="description"
+		content="Syro Malabar Catholic Church affliated with Diocese of Kalyan. We are a parish situated in the locality of Airoli, Navi Mumbai.">
 	<!-- Meta Keyword -->
-	<meta name="keywords" content="st joseph, church, airoli, navi mumbai, kalyan, diocese, syro, malabar, catholic, roman catholic, mumbai, kerala, maharashtra,  youth, catechism, mathrusangam, pithruvedi, osmosis">
+	<meta name="keywords"
+		content="st joseph, church, airoli, navi mumbai, kalyan, diocese, syro, malabar, catholic, roman catholic, mumbai, kerala, maharashtra,  youth, catechism, mathrusangam, pithruvedi, osmosis">
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
@@ -28,7 +30,7 @@
 	<link rel="shortcut icon" href="img/assets/favicon/favicon.ico">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="img/assets/favicon/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff"> 
+	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
@@ -76,7 +78,7 @@
 			<div class="row align-items-center justify-content-between d-flex">
 				<div id="logo">
 					<a href="index.html"><img src="img/assets/logo-light.png" alt="Church Logo"
-						class="img img-fluid header-bar-logo" /></a>
+							class="img img-fluid header-bar-logo" /></a>
 				</div>
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
@@ -166,30 +168,32 @@
 					</div>
 				</div>
 				<div class="col-lg-8">
-					<form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
+					<form class="form-area contact-form text-right" id="myForm"
+						action="https://script.google.com/macros/s/AKfycbyWVUtdrc9t01SknYoiY95a0uYIRwf4H4v3fpl-7uXZNi8ICxYnaJtT4KaERRMMIG61/exec"
+						method="post">
 						<div class="row">
 							<div class="col-lg-6 form-group">
-								<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''"
+								<input name="Name" placeholder="Enter your name" onfocus="this.placeholder = ''"
 									onblur="this.placeholder = 'Enter your name'"
 									class="common-input mb-20 form-control" required="" type="text">
 
-								<input name="email" placeholder="Enter email address"
+								<input name="Email" placeholder="Enter email address"
 									pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
 									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'"
 									class="common-input mb-20 form-control" required="" type="email">
 
-								<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''"
+								<input name="Subject" placeholder="Enter subject" onfocus="this.placeholder = ''"
 									onblur="this.placeholder = 'Enter subject'" class="common-input mb-20 form-control"
 									required="" type="text">
 							</div>
 							<div class="col-lg-6 form-group">
-								<textarea class="common-textarea form-control" name="message"
+								<textarea class="common-textarea form-control" name="Message"
 									placeholder="Enter Messege" onfocus="this.placeholder = ''"
 									onblur="this.placeholder = 'Enter Messege'" required=""></textarea>
 							</div>
 							<div class="col-lg-12">
-								<div class="alert-msg text-align-left"></div>
-								<button class="genric-btn primary send-message-btn">Send Message</button>
+								<div class="alert-msg text-align-left" id="alertMsg"></div>
+								<button class="genric-btn primary send-message-btn" id="SubmitBtn">Send Message</button>
 							</div>
 						</div>
 					</form>
@@ -283,6 +287,7 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/lightbox.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/mail-script.js"></script>
 </body>
 
 </html>
