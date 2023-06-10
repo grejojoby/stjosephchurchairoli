@@ -125,7 +125,7 @@
 		<div class="container">
 			<div class="row fullscreen d-flex align-items-center justify-content-between">
 				<div class="banner-content col-lg-12 col-md-12 text-center">
-					<img src="img/assets/church-logo.png" alt="Church Logo" class="img img-fluid" style="width: 20%;">
+					<img src="img/assets/church-logo.png" alt="Church Logo" class="img img-fluid banner-logo-church">
 					<h1 class="text-uppercase">
 						St. Joseph's Church, Airoli
 					</h1>
@@ -147,19 +147,19 @@
 						<div class="title">
 							<h4>Holy Qurbana Timings</h4>
 						</div>
-						<div class="desc-wrap qurabana-timing">
-							<p class="" style="margin-bottom: 0;">Monday, Thursday, Saturday</p>
-							<p style="margin-top: 2px;font-weight: 500;"><strong>Holy Qurbana: 7:00 PM</strong></p>
-							<p class="" style="margin-bottom: 0;">Tuesday</p>
-							<p style="margin-top: 2px;font-weight: 500;"><strong>Holy Qurbana: 7:00 AM</strong></p>
-							<p class="" style="margin-bottom: 0;">Wednesday</p>
-							<p style="margin-top: 2px;font-weight: 500;"><strong>Holy Qurbana, Novena of Mother of
+						<div class="desc-wrap qurbana-timing">
+							<p class="qurbana-timing-days">Monday, Thursday, Saturday</p>
+							<p class="qurbana-timing-time"><strong>Holy Qurbana: 7:00 PM</strong></p>
+							<p class="qurbana-timing-days">Tuesday</p>
+							<p class="qurbana-timing-time"><strong>Holy Qurbana: 7:00 AM</strong></p>
+							<p class="qurbana-timing-days">Wednesday</p>
+							<p class="qurbana-timing-time"><strong>Holy Qurbana, Novena of Mother of
 									Perpetual Help: 7:00 PM</strong></p>
-							<p class="" style="margin-bottom: 0;">Friday</p>
-							<p style="margin-top: 2px;font-weight: 500;"><strong>Holy Qurbana, Novena of St. Joseph:
+							<p class="qurbana-timing-days">Friday</p>
+							<p class="qurbana-timing-time"><strong>Holy Qurbana, Novena of St. Joseph:
 									7:00 PM</strong></p>
-							<p class="" style="margin-bottom: 0;">Sunday</p>
-							<p style="margin-top: 2px;font-weight: 500;"><strong>Holy Qurbana: 8:00 AM</strong></p>
+							<p class="qurbana-timing-days">Sunday</p>
+							<p class="qurbana-timing-time"><strong>Holy Qurbana: 8:00 AM</strong></p>
 						</div>
 					</div>
 				</div>
@@ -170,24 +170,23 @@
 						</div>
 						<div class="desc-wrap bible-reading">
 							<p><i class="fa fa-info"></i> If the reading is not up to date, try reloading the page.</p>
-							<p style="margin-top: 2px;margin-bottom:0;font-weight: 700;" id="DayDescEng"></p>
-							<p style="font-size: larger;font-weight: 700;" id="DayDescMal"></p>
+							<p id="DayDescEng"></p>
+							<p id="DayDescMal"></p>
 							<dl class="accordion mt-3 bible-reading-accordion">
 								<dt>
 									<a href="">Normal Reading</a>
 								</dt>
-								<dd id="NormalReading" style="font-weight: 500;margin-bottom: 0;">
+								<dd id="NormalReading" class="fw-500 mb-0">
 
 								</dd>
 								<dt id="feastReadingsSection">
 									<a href="">Feast Reading</a>
 								</dt>
 								<dd id="feastReadingsDescSection">
-									<p style="font-weight: 600;"><span id="feastNameEng"></span><br><span
-											style="font-size: larger;" id="feastNameMal"></span></p>
-
-									<p class="mt-3" style="font-weight: 500;margin-bottom: 0;" id="FeastReadings"></p>
-
+									<p class="fw-600">
+										<span id="feastNameEng"></span><br><span id="feastNameMal"></span>
+									</p>
+									<p class="mt-3 fw-500 mb-0" id="FeastReadings"></p>
 								</dd>
 							</dl>
 						</div>
@@ -206,8 +205,7 @@
 						<h2><strong>Our Vicar</strong></h2>
 					</div>
 					<div class="text-center pb-20">
-						<img src="img/priests/parishPriest.jpg" class="img img-fluid" alt="#"
-							style="border-radius: 10px;width: 80%;" />
+						<img src="img/priests/parishPriest.jpg" class="img img-fluid pp-img" alt="Parish Priest Image"/>
 					</div>
 					<div class="text-center">
 						<h6><strong>Fr. Lijo Velliyamkandathil</strong></h6>

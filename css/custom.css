@@ -24,7 +24,7 @@
     color: #222;
 }
 
-.qurabana-timing p {
+.qurbana-timing p {
     color: #555;
 }
 
@@ -155,6 +155,7 @@
     .unit-box {
         width: 80vw;
     }
+
     .unit-grid {
         width: 100%;
         margin: auto;
@@ -174,4 +175,46 @@
 .header-bar-logo {
     height: 70px;
     padding: 10px;
+}
+
+.banner-logo-church {
+    width: 20%;
+}
+
+.qurbana-timing-days {
+    margin-bottom: 0;
+}
+
+.qurbana-timing-time {
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+#DayDescEng {
+    margin-top: 2px;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+#DayDescMal {
+    font-size: larger;
+    font-weight: 700;
+}
+
+#feastNameMal {
+    font-size: larger;
+}
+
+.pp-img {
+    border-radius: 10px;
+    width: 80%;
+}
+
+.map-wrap {
+    width: 100%;
+    height: 445px;
+}
+
+.send-message-btn {
+    float: right;
 }
