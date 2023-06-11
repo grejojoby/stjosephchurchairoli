@@ -272,10 +272,8 @@
 			</div>
 			<div class="row">
 				<div class="col-12">
-					<div class="announcements-box">
-						<ul class="annoucements-list" id="annoucementsList">
-
-						</ul>
+					<div class="announcements-box" id="annoucementsList">
+						
 					</div>
 				</div>
 			</div>
@@ -584,14 +582,10 @@
 				const onSuccess = (data) => {
 
 					document.getElementById('annoucementUpdateDate').innerHTML = formatDate(data.date);
-					for (let l of data.text) {
-						const li = document.createElement("li");
-						li.innerText = l;
-						announcementslist.appendChild(li);
-					}
+					document.getElementById('annoucementsList').innerHTML = data.annoucementRichText.html;
 				};
 
-				const apiUrl = 'https://api-ap-south-1.hygraph.com/v2/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20MyQuery%20%7B%0A%20%20annoucements(last%3A%201)%20%7B%0A%20%20%20%20id%0A%20%20%20%20date%0A%20%20%20%20text%0A%20%20%7D%0A%7D%0A&operationName=MyQuery';
+				const apiUrl = 'https://api-ap-south-1.hygraph.com/v2/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20MyQuery%20%7B%0A%20%20annoucements(last%3A%201%2CorderBy%3A%20date_ASC)%20%7B%0A%20%20%20%20id%0A%20%20%20%20date%0A%20%20%20%20annoucementRichText%20%7B%0A%20%20%20%20%20%20html%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&operationName=MyQuery';
 				fetchData(apiUrl);
 
 			}
