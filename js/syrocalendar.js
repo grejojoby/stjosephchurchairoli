@@ -28,20 +28,6 @@ function GetLiturgicalReadings_Set2JSON() {
     else
         return JSON.parse(window.localStorage.getItem('SyroCalendar_Values'))['Readings_Set2'];
 }
-function PopulateSyroValues(tmtm, SyroType) {
-    switch (SyroType) {
-        case 1:
-            WriteSeasonalInfo(tmtm);
-            if (debug == 1)
-                console.log("Seasonal Info");
-            break;
-        case 3:
-            WriteLiturgicalReadings_Set2(tmtm);
-            if (debug == 1)
-                console.log("Liturgical Readings Set 2");
-            break;
-    }
-}
 function FetchData(TodaysDate) {
     if (TodaysDate === undefined) {
         var today = new Date();
@@ -83,12 +69,7 @@ function FetchData(TodaysDate) {
                 localStorage.removeItem("SyroCalendar_Date");
                 localStorage.setItem("SyroCalendar_Values", JSON.stringify(tmtm));
                 localStorage.setItem("SyroCalendar_Date", today);
-                RunAllFunctions();
             }
         });
     }
-}
-function RunAllFunctions() {
-    PopulateSyroValues(JSON.parse(localStorage.getItem("SyroCalendar_Values")), 1);
-    PopulateSyroValues(JSON.parse(localStorage.getItem("SyroCalendar_Values")), 3);
 }
