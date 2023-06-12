@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700&display=swap');
 ::-moz-selection {
     background-color: #f7631b;
     color: #fff
@@ -2595,38 +2596,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 }
 
-.popular-course-area .owl-dots {
-    text-align: center;
-    bottom: 5px;
-    margin-top: 40px;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden
-}
-
-.popular-course-area .owl-dot {
-    height: 10px;
-    width: 10px;
-    display: inline-block;
-    background: rgba(127, 127, 127, 0.5);
-    margin-left: 5px;
-    margin-right: 5px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s
-}
-
-.popular-course-area .owl-dot.active {
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    background: #f7631b
-}
-
 .single-popular-carusel .thumb {
     overflow: hidden
 }
@@ -2767,45 +2736,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 }
 
-.active-upcoming-event-carusel .owl-dots {
-    display: inline-grid;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    left: 101%;
-    top: 40%
-}
-
-.active-upcoming-event-carusel .owl-dot {
-    height: 10px;
-    width: 10px;
-    display: inline-block;
-    background: rgba(127, 127, 127, 0.5);
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s
-}
-
-.active-upcoming-event-carusel .owl-dot.active {
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    background: #f7631b
-}
-
-@media (max-width: 1024px) {
-    .active-upcoming-event-carusel .owl-controls {
-        display: none
-    }
-}
-
 @media (max-width: 576px) {
     .single-carusel {
         margin: 15px
@@ -2859,42 +2789,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .review-area h4 {
     color: #222
-}
-
-.review-area .owl-carousel .owl-item img {
-    width: auto !important
-}
-
-.review-area .owl-dots {
-    text-align: center;
-    bottom: 5px;
-    margin-top: 20px;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden
-}
-
-.review-area .owl-dot {
-    height: 10px;
-    width: 10px;
-    display: inline-block;
-    background: rgba(127, 127, 127, 0.5);
-    margin-left: 5px;
-    margin-right: 5px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s
-}
-
-.review-area .owl-dot.active {
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    background: #f7631b
 }
 
 .single-review .title {
