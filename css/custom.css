@@ -217,3 +217,11 @@
 .send-message-btn {
     float: right;
 }
+
+.pc-small-text {
+    font-size: 0.9rem;
+}
+
+.pc-title {
+    font-size: 1rem;
+}
