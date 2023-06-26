@@ -185,19 +185,25 @@
 }
 
 .qurbana-timing-time {
-    margin-top: 2px;
+    /* margin-top: 2px; */
+    margin-bottom: 0.5rem;
     font-weight: 500;
 }
 
 #DayDescEng {
     margin-top: 2px;
     margin-bottom: 0;
-    font-weight: 700;
+    font-weight: 600;
+}
+
+#NormalReading {
+    font-size: 1rem;
+    line-height: 2rem;
 }
 
 #DayDescMal {
     font-size: larger;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 #feastNameMal {
