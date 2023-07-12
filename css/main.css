@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700&display=swap');
+
 ::-moz-selection {
     background-color: #f7631b;
     color: #fff
@@ -140,6 +142,14 @@ h1,
 h2,
 .h2 {
     font-size: 30px
+}
+
+@media (max-width: 500px) {
+
+    h2,
+    .h2 {
+        font-size: 25px !important;
+    }
 }
 
 h3,
@@ -2073,6 +2083,7 @@ h6 {
     padding-top: 20px;
     border-bottom: 1px solid #39353e
 }
+
 @media screen and (min-width: 500px) {
     .main-menu {
         padding-bottom: 3px;
@@ -2595,38 +2606,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 }
 
-.popular-course-area .owl-dots {
-    text-align: center;
-    bottom: 5px;
-    margin-top: 40px;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden
-}
-
-.popular-course-area .owl-dot {
-    height: 10px;
-    width: 10px;
-    display: inline-block;
-    background: rgba(127, 127, 127, 0.5);
-    margin-left: 5px;
-    margin-right: 5px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s
-}
-
-.popular-course-area .owl-dot.active {
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    background: #f7631b
-}
-
 .single-popular-carusel .thumb {
     overflow: hidden
 }
@@ -2767,45 +2746,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 }
 
-.active-upcoming-event-carusel .owl-dots {
-    display: inline-grid;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    left: 101%;
-    top: 40%
-}
-
-.active-upcoming-event-carusel .owl-dot {
-    height: 10px;
-    width: 10px;
-    display: inline-block;
-    background: rgba(127, 127, 127, 0.5);
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s
-}
-
-.active-upcoming-event-carusel .owl-dot.active {
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    background: #f7631b
-}
-
-@media (max-width: 1024px) {
-    .active-upcoming-event-carusel .owl-controls {
-        display: none
-    }
-}
-
 @media (max-width: 576px) {
     .single-carusel {
         margin: 15px
@@ -2859,42 +2799,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .review-area h4 {
     color: #222
-}
-
-.review-area .owl-carousel .owl-item img {
-    width: auto !important
-}
-
-.review-area .owl-dots {
-    text-align: center;
-    bottom: 5px;
-    margin-top: 20px;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden
-}
-
-.review-area .owl-dot {
-    height: 10px;
-    width: 10px;
-    display: inline-block;
-    background: rgba(127, 127, 127, 0.5);
-    margin-left: 5px;
-    margin-right: 5px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s
-}
-
-.review-area .owl-dot.active {
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    background: #f7631b
 }
 
 .single-review .title {
@@ -3087,6 +2991,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 .about-content h1 {
     font-size: 48px;
     font-weight: 600
+}
+
+@media (max-width: 540px) {
+    .about-content h1 {
+        font-size: 36px;
+        font-weight: 600
+    }
 }
 
 .about-content a {
@@ -3500,7 +3411,7 @@ dl.toggle.time-line:before {
 @media (max-width: 504px) {
     .left-contents .jq-tab-menu .jq-tab-title {
         padding: .9em .9em;
-        font-size: 10px
+        font-size: 14px;
     }
 }
 
@@ -3867,16 +3778,12 @@ dl.toggle.time-line:before {
 .gallery-area .single-imgs {
     padding-bottom: 30px;
     height: 100%;
-    max-height: 300px;
-    min-height: 250px;
 }
 
 .gallery-area .single-imgs img {
-    height: 100%;
     width: 100%;
-    max-height: 300px;
-    min-height: 250px;
     object-fit: cover;
+    aspect-ratio: 4/3;
 }
 
 .gallery-area .single-imgs .overlay-bg {
@@ -3888,8 +3795,7 @@ dl.toggle.time-line:before {
     transition: all 0.3s ease 0s;
     z-index: 2;
     margin-bottom: 30px;
-    max-height: 300px;
-    min-height: 250px;
+    aspect-ratio: 4/3;
 }
 
 .gallery-area .single-imgs:hover .overlay-bg {
