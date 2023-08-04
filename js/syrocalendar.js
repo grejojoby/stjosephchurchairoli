@@ -86,15 +86,11 @@ function PopulateSyroValues(tmtm, SyroType) {
     }
 }
 function FetchData(TodaysDate) {
-    if (TodaysDate === undefined) {
-        var today = new Date();
-        var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0');
-        var yyyy = today.getFullYear();
-        today = dd + '-' + mm + '-' + yyyy;
-    } else {
-        today = TodaysDate;
-    }
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    today = dd + '-' + mm + '-' + yyyy;
     var SavedSyroValueDate = localStorage.getItem("SyroCalendar_Date");
     if (SavedSyroValueDate == today) {
         if (debug == 1)
