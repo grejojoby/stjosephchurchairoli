@@ -206,6 +206,35 @@
 						let tabpanes = document.getElementsByClassName('tab-pane');
 						tabpanes[0].classList.add("show", "active")
 					}
+					//2008
+					document.getElementById('pills-tab').innerHTML += `
+					<li class="nav-item">
+						<a class="nav-link gallery-pill-link" id="pills-2008-tab" data-toggle="pill"
+							href="#pills-2008" role="tab" aria-controls="pills-2008" aria-selected="false">2008</a>
+					</li>`;
+					document.getElementById('pills-tabContent').innerHTML += `
+					<div class="tab-pane fade" id="pills-2008" role="tabpanel" aria-labelledby="pills-2008-tab">
+						<div class="container">
+							<div class="row" id="gallery-pill-row-2008">
+							
+							</div>
+						</div>
+					</div>`;
+
+					for (let i = 1; i <= 33; i++) {
+						document.getElementById('gallery-pill-row-2008').innerHTML += `
+						<div class="col-lg-4">
+						<a href="img/gallery/2008/${i}.webp" class="img-gal" data-lightbox="gallery-home" data-title="2008 Photos">
+							<div class="single-imgs relative">
+								<div class="overlay overlay-bg"></div>
+								<img class="img" src="img/gallery/2008/${i}.webp"
+								alt="2008 Photos">
+							</div>
+						</a>
+					</div>`;
+					}
+
+					//Old Photos
 					document.getElementById('pills-tab').innerHTML += `
 					<li class="nav-item">
 						<a class="nav-link gallery-pill-link" id="pills-old-tab" data-toggle="pill"
