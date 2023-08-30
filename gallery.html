@@ -196,7 +196,7 @@
 									<div class="single-imgs relative">
 										<div class="overlay overlay-bg"></div>
 										<img class="img" src="${el.imageFile.url}"
-										alt="">
+										alt="${el.caption}">
 									</div>
 								</a>
 							</div>
@@ -206,8 +206,36 @@
 						let tabpanes = document.getElementsByClassName('tab-pane');
 						tabpanes[0].classList.add("show", "active")
 					}
+					document.getElementById('pills-tab').innerHTML += `
+					<li class="nav-item">
+						<a class="nav-link gallery-pill-link" id="pills-old-tab" data-toggle="pill"
+							href="#pills-old" role="tab" aria-controls="pills-old" aria-selected="false">Old</a>
+					</li>`;
+					document.getElementById('pills-tabContent').innerHTML += `
+					<div class="tab-pane fade" id="pills-old" role="tabpanel" aria-labelledby="pills-old-tab">
+						<div class="container">
+							<div class="row" id="gallery-pill-row-old">
+							
+							</div>
+						</div>
+					</div>`;
+
+					for (let i = 1; i <= 83; i++) {
+						document.getElementById('gallery-pill-row-old').innerHTML += `
+						<div class="col-lg-4">
+						<a href="img/gallery/old/${i}.webp" class="img-gal" data-lightbox="gallery-home" data-title="Old Photos">
+							<div class="single-imgs relative">
+								<div class="overlay overlay-bg"></div>
+								<img class="img" src="img/gallery/old/${i}.webp"
+								alt="Old Photos">
+							</div>
+						</a>
+					</div>`;
+					}
 				}
 				getImagesFromCMS();
+
+
 			</script>
 		</div>
 	</section>
