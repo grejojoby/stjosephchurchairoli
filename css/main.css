@@ -2485,12 +2485,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-area {
-    background: url("https://i.ytimg.com/vi/5HWr4k6d6kI/maxresdefault_live.jpg") right;
+    background: url("../img/assets/new_altar.webp") right;
     background-size: cover
 }
 
 .banner-area .overlay-bg {
-    background-color: rgba(4, 9, 30, 0.8)
+    background-color: rgba(4, 9, 30, 0.7)
 }
 
 @media (max-width: 767px) {
