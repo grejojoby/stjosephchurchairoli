@@ -1,6 +1,42 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import CommonBanner from "../components/CommonBanner.astro";
+import PeopleGrid from "../components/PeopleGrid.astro";
+
+const priestsList = [
+	{
+		name: "Fr. Jins Kannadippara",
+		subText: "Diocese of Kalyan",
+		imgSrc: "img/vocations/frJins.webp"
+	}
+];
+
+const sistersList = [
+	{
+		name: "Sr. Gracelin, SABS",
+		subText: "St. Thomas Convent, Anuppur, Madhya Pradesh",
+		imgSrc: "img/vocations/5.webp"
+	},
+	{
+		name: "Sr. Regina Parokkaran",
+		subText: "Missionary Sisters of St. Peter Claver, Zug, Switzerland",
+		imgSrc: "img/vocations/4.webp"
+	}
+];
+
+const brothersList = [
+	{
+		name: "Br. Jenson Alappatt",
+		subText: "Diocese of Shamshabad,<br>Thrissur, Kerala",
+		imgSrc: "img/vocations/3.webp"
+	},
+	{
+		name: "Br. Akshay Attokaran",
+		subText: "Diocese of Kalyan, <br>Rome, Italy",
+		imgSrc: "img/vocations/2.webp"
+	}
+];
 ---
 
 <!DOCTYPE html>
@@ -21,13 +57,13 @@ import Footer from "../components/Footer.astro";
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>Former Parish Priests - St. Joseph's Church, Airoli</title>
+	<title>Vocations From Parish - St. Joseph's Church, Airoli</title>
 
 	<link rel="canonical" href="https://stjosephchurchairoli.in/former-priests.html">
 
 	<meta property="og:url" content="https://stjosephchurchairoli.in/former-priests.html">
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="Former Parish Priests - St. Joseph's Church, Airoli">
+	<meta property="og:title" content="Vocations From Parish - St. Joseph's Church, Airoli">
 	<meta property="og:description"
 		content="Syro Malabar Catholic Church affliated with Diocese of Kalyan. We are a parish situated in the locality of Airoli, Navi Mumbai. We have organizations like Catechism, Mathrusangam, Youth Osmosis, Pithruvedi, Altar Boys. Check latest Bible Readings on our page.">
 	<meta property="og:image" content="https://stjosephchurchairoli.in/img/logo-og.webp">
@@ -36,7 +72,7 @@ import Footer from "../components/Footer.astro";
 	<meta name="twitter:card" content="summary_large_image">
 	<meta property="twitter:domain" content="stjosephchurchairoli.in">
 	<meta property="twitter:url" content="https://stjosephchurchairoli.in/former-priests.html">
-	<meta name="twitter:title" content="Former Parish Priests - St. Joseph's Church, Airoli">
+	<meta name="twitter:title" content="Vocations From Parish - St. Joseph's Church, Airoli">
 	<meta name="twitter:description"
 		content="Syro Malabar Catholic Church affliated with Diocese of Kalyan. We are a parish situated in the locality of Airoli, Navi Mumbai. We have organizations like Catechism, Mathrusangam, Youth Osmosis, Pithruvedi, Altar Boys. Check latest Bible Readings on our page.">
 	<meta name="twitter:image" content="https://stjosephchurchairoli.in/img/logo-og.webp">
@@ -82,178 +118,10 @@ import Footer from "../components/Footer.astro";
 
 <body>
 	<Header />
-
-	<!-- start banner Area -->
-	<section class="banner-area relative about-banner" id="home">
-		<div class="overlay overlay-bg"></div>
-		<div class="container">
-			<div class="row d-flex align-items-center justify-content-center">
-				<div class="about-content col-lg-12">
-					<h1 class="text-white">
-						Former Parish Priests
-					</h1>
-					<p class="text-white link-nav"><a href="index.html">Home </a> <span
-							class="fa fa-chevron-right"></span> About<span class="fa fa-chevron-right"></span> <a
-							href="former-priests.html"> Former Parish Priests</a></p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End banner Area -->
-
-	<!-- Start course-details Area -->
-	<section class="course-details-area pt-40 mt-5 pb-40">
-		<div class="container bootdey">
-			<div class="row">
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/15.webp" class="img-fluid avatar avatar-medium shadow rounded-pill"
-							alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Lijo Velliyamkandathil</h4>
-							<small class="text-muted">2022 - Present</small>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/14.webp" class="img-fluid avatar avatar-medium shadow rounded-pill"
-							alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Zacharias Neelankavil</h4>
-							<small class="text-muted">2019 - 2022</small>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/13.webp" class="img-fluid avatar avatar-medium shadow rounded-pill"
-							alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Martin Kombara</h4>
-							<small class="text-muted">2015 - 2019</small>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/12.webp" class="img-fluid avatar avatar-medium shadow rounded-pill"
-							alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Francis Eluvathingal</h4>
-							<small class="text-muted">2014 - 2015</small>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/11.webp" class="img-fluid avatar avatar-medium shadow rounded-pill"
-							alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Sinto Chalisseery</h4>
-							<small class="text-muted">2010 - 2014</small>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/10.webp" class="img-fluid avatar avatar-medium shadow rounded-pill"
-							alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Martin Velliyamkandathil</h4>
-							<small class="text-muted">2009 - 2010(Asst. PP)</small>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/9.webp" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Biju Kollamkunnel</h4>
-							<small class="text-muted">2009 - 2010</small>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/8.webp" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Jose Aloor</h4>
-							<small class="text-muted">2008 - 2009</small>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/7.webp" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Rajesh Mathew</h4>
-							<small class="text-muted">2005 - 2008</small>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/6.webp" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Cyriac Kumbatt</h4>
-							<small class="text-muted">2004 - 2005</small>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/5.webp" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Joju Arackal</h4>
-							<small class="text-muted">2000 - 2004</small>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/4.webp" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Paul Arackal</h4>
-							<small class="text-muted">1997 - 2000</small>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/3.webp" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Kurian Kunninparambil</h4>
-							<small class="text-muted">1993 - 1997</small>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/2.webp" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Thomas Kalappura</h4>
-							<small class="text-muted">1990 - 1993</small>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/priests/1.webp" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
-						<div class="content mt-3">
-							<h4 class="title mb-0">Fr. Thomas Thalachira</h4>
-							<small class="text-muted">1989 - 1990</small>
-						</div>
-					</div>
-				</div>
-
-
-			</div>
-		</div>
-	</section>
-
+	<CommonBanner title="Vocations From Parish" />
+	<PeopleGrid dataList={priestsList} sectionTitle="Priests" />
+	<PeopleGrid dataList={sistersList} sectionTitle="Sisters" />
+	<PeopleGrid dataList={brothersList} sectionTitle="Brothers" />
 	<Footer />
-
 </body>
-
 </html>

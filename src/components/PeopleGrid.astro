@@ -1,10 +1,16 @@
 ---
-const { dataList } = Astro.props;
+const { sectionTitle, dataList } = Astro.props;
 ---
 
-<section class="course-details-area pt-40 mt-5 pb-40">
+<section class:list={["course-details-area pt-40 mt-3"]}>
   <div class="container bootdey">
-    <div class="row">
+    {
+      sectionTitle &&
+        <div class="row justify-content-center">
+          <h2 class="text-center">{sectionTitle}</h2>
+        </div>
+    }
+    <div class:list={["row justify-content-center"]}>
       {
         dataList.map((item) => (
           <div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
@@ -16,7 +22,7 @@ const { dataList } = Astro.props;
               />
               <div class="content mt-3">
                 <h4 class="title mb-0">{item.name}</h4>
-                <small class="text-muted">{item.period}</small>
+                <small class="text-muted" set:html={item.subText}></small>
               </div>
             </div>
           </div>
