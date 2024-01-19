@@ -2,6 +2,11 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CommonMetaTags from "../components/CommonMetaTags.astro";
+import CommonBanner from "../components/CommonBanner.astro";
+import Gallery from "../components/Gallery.astro";
+
+const cmsUrl =
+  "https://ap-south-1.cdn.hygraph.com/content/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20Assets%20%7B%0A%20%20galleries(orderBy%3A%20year_DESC%2C%20where%3A%20%7Btags%3A%20Mathrusangam%7D)%20%7B%0A%20%20%20%20year%0A%20%20%20%20tags%0A%20%20%20%20imageFile%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20caption%0A%20%20%7D%0A%7D%0A&operationName=Assets";
 ---
 
 <!doctype html>
@@ -15,33 +20,12 @@ import CommonMetaTags from "../components/CommonMetaTags.astro";
 
   <body>
     <Header />
+    <CommonBanner title="Mathrusangam" />
 
-    <!-- start banner Area -->
-    <section class="banner-area relative about-banner" id="home">
-      <div class="overlay overlay-bg"></div>
-      <div class="container">
-        <div class="row d-flex align-items-center justify-content-center">
-          <div class="about-content col-lg-12">
-            <h1 class="text-white">Mathrusangam</h1>
-            <p class="text-white link-nav">
-              <a href="index.html">Home</a>
-              <span class="fa fa-chevron-right"></span>
-              <a href="mathrusangam.html"> Mathrusangam</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End banner Area -->
-
-    <!-- Start course-details Area -->
     <section class="course-details-area pt-10 pb-40">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 left-contents">
-            <!-- <div class="main-image">
-								<img class="img-fluid" src="img/m-img.jpg" alt="">
-							</div> -->
             <div class="jq-tab-wrapper" id="horizontalTab">
               <div class="jq-tab-menu">
                 <div class="jq-tab-title active" data-tab="1">About</div>
@@ -186,85 +170,7 @@ import CommonMetaTags from "../components/CommonMetaTags.astro";
       </div>
     </section>
 
-    <!-- End course-details Area -->
-
-    <section id="announcements">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h2><strong>Gallery</strong></h2>
-            <!-- <p class="lead">Updated on <span id="annoucementUpdateDate">15 April, 2023</p> -->
-          </div>
-        </div>
-      </div>
-      <section class="gallery-area mt-4">
-        <div class="container">
-          <div class="row justify-content-center my-3">
-            <ul
-              class="nav nav-pills mb-3 gallery-pill-row"
-              id="pills-tab"
-              role="tablist"
-            >
-            </ul>
-          </div>
-          <div class="row tab-content" id="pills-tabContent"></div>
-          <script>
-            var galleryData = [];
-            const url =
-              "https://ap-south-1.cdn.hygraph.com/content/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20Assets%20%7B%0A%20%20galleries(orderBy%3A%20year_DESC%2C%20where%3A%20%7Btags%3A%20Mathrusangam%7D)%20%7B%0A%20%20%20%20year%0A%20%20%20%20tags%0A%20%20%20%20imageFile%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20caption%0A%20%20%7D%0A%7D%0A&operationName=Assets";
-            async function getImagesFromCMS() {
-              const reps = await fetch(url);
-              var data = await reps.json();
-              data = data.data.galleries;
-
-              for (var i = 0; i < data.length; i++) {
-                galleryData.push(data[i]);
-              }
-              let galleryYears = [];
-              for (let index = 0; index < galleryData.length; index++) {
-                const el = galleryData[index];
-                if (!galleryYears.includes(el.year)) {
-                  galleryYears.push(el.year);
-                  document.getElementById("pills-tab").innerHTML += `
-									<li class="nav-item">
-										<a class="nav-link gallery-pill-link" id="pills-${el.year}-tab" data-toggle="pill"
-											href="#pills-${el.year}" role="tab" aria-controls="pills-${el.year}" aria-selected="false">${el.year}</a>
-									</li>`;
-                  document.getElementById("pills-tabContent").innerHTML += `
-									<div class="tab-pane fade" id="pills-${el.year}" role="tabpanel" aria-labelledby="pills-${el.year}-tab">
-										<div class="container">
-											<div class="row" id="gallery-pill-row-${el.year}">
-											
-											</div>
-										</div>
-									</div>`;
-                }
-                document.getElementById(
-                  `gallery-pill-row-${el.year}`,
-                ).innerHTML += `
-								<div class="col-lg-4">
-									<a href="${el.imageFile.url}" class="img-gal" data-lightbox="gallery-home" data-title="${el.caption}">
-										<div class="single-imgs relative">
-											<div class="overlay overlay-bg"></div>
-											<img class="img" src="${el.imageFile.url}"
-											alt="">
-										</div>
-									</a>
-								</div>
-							`;
-                let tabpills =
-                  document.getElementsByClassName("gallery-pill-link");
-                tabpills[0].classList.add("active");
-                let tabpanes = document.getElementsByClassName("tab-pane");
-                tabpanes[0].classList.add("show", "active");
-              }
-            }
-            getImagesFromCMS();
-          </script>
-        </div>
-      </section>
-
-      <Footer />
-    </section>
+    <Gallery cmsUrl={cmsUrl} />
+    <Footer />
   </body>
 </html>
