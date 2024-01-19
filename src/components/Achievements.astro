@@ -1,0 +1,28 @@
+---
+const { items } = Astro.props;
+---
+
+<section class="course-details-area pt-10 pb-40">
+  <div class="container bootdey">
+    <div class="row justify-content-center">
+      {
+        items.map((item) => (
+          <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+            <div class="team text-center rounded p-3 py-4">
+              <img
+                src=`${item.imgSrc}`
+                alt=`${item.altText}`
+                class="img img-fluid mb-3"
+              />
+              <div class="content mt-3">
+                <p style="font-weight: 600;">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

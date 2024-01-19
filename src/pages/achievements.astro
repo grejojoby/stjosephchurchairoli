@@ -1,6 +1,16 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import CommonBanner from "../components/CommonBanner.astro";
+import AchievementsGrid from "../components/Achievements.astro";
+
+const achievementsData = [
+	{
+		imgSrc:"img/catechism-award.webp",
+		altText:"Catechism Award",
+		desc:"Our Catechism Department won A+ Grade for Best Catechetical Unit of Kalyan Diocese in Isaac Group."
+	}
+]
 ---
 
 <!DOCTYPE html>
@@ -80,48 +90,8 @@ import Footer from "../components/Footer.astro";
 
 <body>
 	<Header />
-
-	<!-- start banner Area -->
-	<section class="banner-area relative about-banner" id="home">
-		<div class="overlay overlay-bg"></div>
-		<div class="container">
-			<div class="row d-flex align-items-center justify-content-center">
-				<div class="about-content col-lg-12">
-					<h1 class="text-white">
-						Achievements
-					</h1>
-					<p class="text-white link-nav"><a href="index.html">Home </a> <span
-							class="fa fa-chevron-right"></span> <a href="about.html">About</a> <span
-							class="fa fa-chevron-right"></span> <a href="contributors.html">Achievements</a></p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End banner Area -->
-
-	<!-- Start course-details Area -->
-	<section class="course-details-area pt-10 pb-40">
-		<div class="container bootdey">
-
-			<div class="row justify-content-center">
-				<div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-					<div class="team text-center rounded p-3 py-4">
-						<img src="img/catechism-award.webp" alt="Catechism Award" class="img img-fluid mb-3">
-						<div class="content mt-3">
-							<h5>Our Catechism Department won A+ Grade for Best Catechetical Unit of Kalyan Diocese in
-								Isaac Group.</h5>
-						</div>
-					</div>
-
-				</div>
-				<!--end col-->
-
-
-			</div><!--end row-->
-		</div>
-	</section>
-	<!-- End course-details Area -->
-
+	<CommonBanner title="Achievements" />
+	<AchievementsGrid items={achievementsData} />
 	<Footer />
 
 </body>
