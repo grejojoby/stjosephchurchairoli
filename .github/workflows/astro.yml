@@ -33,6 +33,11 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+            version: 8.13.1
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
