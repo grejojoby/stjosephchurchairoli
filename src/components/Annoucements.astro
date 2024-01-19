@@ -1,0 +1,79 @@
+---
+
+---
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+        today = dd + '-' + mm + '-' + yyyy;
+        FetchData(today);
+        function loadAnnouncements() {
+            const announcementslist = $('#annoucementsList')[0]
+            if (!announcementslist) return;
+
+            let responseData;
+            const fetchData = async (url) => {
+                try {
+                    const response = await fetch(url);
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+                    onSuccess(data.data.annoucements[0]);
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                }
+            };
+
+            const formatDate = (dateString) => {
+                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                const date = new Date(dateString);
+                const day = date.getDate();
+                const month = months[date.getMonth()];
+                const year = date.getFullYear();
+
+                return `${day} ${month}, ${year}`;
+            };
+
+            const onSuccess = (data) => {
+
+                document.getElementById('annoucementUpdateDate').innerHTML = formatDate(data.date);
+                document.getElementById('annoucementsList').innerHTML = data.annoucementRichText.html;
+            };
+
+            const apiUrl = 'https://api-ap-south-1.hygraph.com/v2/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20MyQuery%20%7B%0A%20%20annoucements(last%3A%201%2CorderBy%3A%20date_ASC)%20%7B%0A%20%20%20%20id%0A%20%20%20%20date%0A%20%20%20%20annoucementRichText%20%7B%0A%20%20%20%20%20%20html%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&operationName=MyQuery';
+            fetchData(apiUrl);
+
+        }
+
+        function loadReadings() {
+            var BibleReadings = GetLiturgicalReadingsJSON();
+            if (Array.isArray(BibleReadings)) {
+                $('#DayDescEng').html(`${BibleReadings[0].DayDescription_Eng}: ${BibleReadings[0].SeasonName_Eng_Full}`);
+                $('#DayDescMal').html(`${BibleReadings[0].DayDescription_Mal}: ${BibleReadings[0].SeasonName_Mal_Full}`);
+                if (BibleReadings[0].Reading1_Mal) {
+                    $('#NormalReading').append(`${BibleReadings[0].Reading1_Mal}: ${BibleReadings[0].Reading1_Eng}<br> `);
+                }
+                if (BibleReadings[0].Reading2_Mal) {
+                    $('#NormalReading').append(`${BibleReadings[0].Reading2_Mal}: ${BibleReadings[0].Reading2_Eng}<br> `);
+                }
+                if (BibleReadings[0].Reading3_Mal) {
+                    $('#NormalReading').append(`${BibleReadings[0].Reading3_Mal}: ${BibleReadings[0].Reading3_Eng}<br> `);
+                }
+                if (BibleReadings[0].ReadingGospal_Mal) {
+                    $('#NormalReading').append(`${BibleReadings[0].ReadingGospal_Mal}: ${BibleReadings[0].ReadingGospal_Eng}<br> `);
+                }
+
+            } else {
+                document.getElementById('bibleReadingBlock').remove();
+            }
+        }
+        loadAnnouncements();
+        loadReadings();
+    });
+</script>

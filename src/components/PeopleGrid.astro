@@ -1,0 +1,33 @@
+---
+const { sectionTitle, dataList } = Astro.props;
+---
+
+<section class:list={["course-details-area pt-40 mt-3"]}>
+  <div class="container bootdey">
+    {
+      sectionTitle &&
+        <div class="row justify-content-center">
+          <h2 class="text-center">{sectionTitle}</h2>
+        </div>
+    }
+    <div class:list={["row justify-content-center"]}>
+      {
+        dataList.map((item) => (
+          <div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
+            <div class="team text-center rounded p-3 py-4">
+              <img
+                src=`${item.imgSrc}`
+                class="img-fluid avatar avatar-medium shadow rounded-pill"
+                alt=""
+              />
+              <div class="content mt-3">
+                <h4 class="title mb-0">{item.name}</h4>
+                <small class="text-muted" set:html={item.subText}></small>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

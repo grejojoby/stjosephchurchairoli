@@ -1,0 +1,32 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CommonBanner from "../components/CommonBanner.astro";
+import AchievementsGrid from "../components/Achievements.astro";
+import CommonMetaTags from "../components/CommonMetaTags.astro";
+
+const achievementsData = [
+  {
+    imgSrc: "img/catechism-award.webp",
+    altText: "Catechism Award",
+    desc: "Our Catechism Department won A+ Grade for Best Catechetical Unit of Kalyan Diocese in Isaac Group.",
+  },
+];
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Achievements - St. Joseph's Church, Airoli</title>
+    <CommonMetaTags />
+  </head>
+
+  <body>
+    <Header />
+    <CommonBanner title="Achievements" />
+    <AchievementsGrid items={achievementsData} />
+    <Footer />
+  </body>
+</html>

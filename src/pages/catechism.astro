@@ -1,0 +1,115 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CommonBanner from "../components/CommonBanner.astro";
+import Gallery from "../components/Gallery.astro";
+import CommonMetaTags from "../components/CommonMetaTags.astro";
+import PeopleTable from "../components/PeopleTable.astro";
+
+import { catechismList } from "../data/catechismData.js";
+
+const cmsUrl =
+  "https://ap-south-1.cdn.hygraph.com/content/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20Assets%20%7B%0A%20%20galleries(orderBy%3A%20year_DESC%2C%20where%3A%20%7Btags%3A%20Catechism%7D)%20%7B%0A%20%20%20%20year%0A%20%20%20%20tags%0A%20%20%20%20imageFile%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20caption%0A%20%20%7D%0A%7D%0A&operationName=Assets";
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>Catechism - St. Joseph's Church, Airoli</title>
+
+    <CommonMetaTags />
+  </head>
+
+  <body>
+    <Header />
+    <CommonBanner title="Catechism (Faith Formation)" />
+
+    <section class="course-details-area pt-10 pb-40">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 left-contents">
+            <div class="jq-tab-wrapper" id="horizontalTab">
+              <div class="jq-tab-menu">
+                <div class="jq-tab-title active" data-tab="1">Objective</div>
+                <div class="jq-tab-title" data-tab="2">Events</div>
+                <div class="jq-tab-title" data-tab="3">Teachers</div>
+              </div>
+              <div class="jq-tab-content-wrapper">
+                <div class="jq-tab-content active" data-tab="1">
+                  <b class="fw-500">Vision</b>
+                  <br />The vision of the Catechism department is to nurture the
+                  faith formation of children, fostering their spiritual,
+                  ecclesial, and social growth. We strive to provide a platform
+                  that encompasses faith formation, value education, worship,
+                  and service.
+                  <br /><br />
+                  <b class="fw-500">Objectives</b><br />
+                  Our objective is to cultivate leadership qualities among our children,
+                  empowering them to become confident and compassionate individuals.
+                  Moreover, we aim to guide them in recognizing our unique and distinct
+                  identity as St. Thomas Christians in the Diocese of Kalyan. Additionally,
+                  we encourage our children to showcase their hidden talents through
+                  active participation in various religious and cultural events of
+                  the Church. Together, we embark on a journey of holistic development,
+                  nurturing the minds, hearts, and spirits of our young ones.
+                </div>
+                <div class="jq-tab-content" data-tab="2">
+                  <b class="fw-500">Coffee With Jesus</b>
+                  <br />A monthly prayer service hosted by the catechism
+                  students. Includes worship songs, intercessory prayers, and
+                  concludes with the Eucharist blessing.
+
+                  <br /><b class="fw-500">Grandparents and Parents Day</b>
+                  <br />Celebrated by children by gifting cards and roses to
+                  every grandparent in the parish. Families stand and pray
+                  together for the Holy Mass.
+
+                  <br /><b class="fw-500">Faith Formation Day</b>
+                  <br />Children participate in the yearly St. Thomas Academy,
+                  where they prepare a variety of cultural performances both
+                  individually and collectively as a Catechism department,
+                  imparting in them Christian principles of cooperation,
+                  diligence, and teamwork.
+
+                  <br /><b class="fw-500"
+                    >Christmas celebration & Outreach programme
+                  </b>
+                  <br />For the joy of Christmas, Catechism students, teachers
+                  and PTF members, all choose Christmas friends. Throughout the
+                  advent season, everyone prays for their friends and exchanges
+                  gifts after midnight mass. <br />
+                  Students practice abstinence and fill out donation boxes that are
+                  eventually given to the orphanage/old age home outreach programme.
+                  The suggested planners are diligently followed by students as they
+                  participate in the Christmas events.
+
+                  <br /><b class="fw-500">Holy Infants Day</b>
+                  <br />Celebrated on the 28th of December. <br />
+                  Small tots of Airoli parish dress up as various characters of the
+                  Nativity scene. The event includes 'Punjiri malsaram', ramp walks,
+                  and fun-filled dance performances by children.
+
+                  <br /><b class="fw-500">Eucharistia camp</b>
+                  Camps are conducted which includes value-based learning with stories,
+                  action songs, and sessions conducted by teachers about the gifts
+                  of the Holy Spirit, alongside various fun-filled games.
+                </div>
+                <div class="jq-tab-content" data-tab="3">
+                  <PeopleTable dataList={catechismList} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Gallery cmsUrl={cmsUrl} />
+    <Footer />
+  </body>
+</html>
