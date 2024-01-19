@@ -67,7 +67,7 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-          cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
+          cache-dependency-path: ${{github.workspace}}/functions/package-lock.json
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
