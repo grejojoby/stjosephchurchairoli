@@ -1,0 +1,75 @@
+---
+const { cmsUrl } = Astro.props;
+---
+
+<section class="mt-5 pt-5 bg-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2><strong>Gallery</strong></h2>
+      </div>
+    </div>
+  </div>
+  <section class="gallery-area mt-4">
+    <div class="container">
+      <div class="row justify-content-center my-3">
+        <ul
+          class="nav nav-pills mb-3 gallery-pill-row"
+          id="pills-tab"
+          role="tablist"
+        >
+        </ul>
+      </div>
+      <div class="row tab-content" id="pills-tabContent"></div>
+      <script is:inline define:vars={{ cmsUrl }}>
+        var galleryData = []; 
+        async function getImagesFromCMS() {
+          const reps = await fetch(cmsUrl);
+          var data = await reps.json();
+          data = data.data.galleries;
+
+          for (var i = 0; i < data.length; i++) {
+            galleryData.push(data[i]);
+          }
+          let galleryYears = [];
+          for (let index = 0; index < galleryData.length; index++) {
+            const el = galleryData[index];
+            if (!galleryYears.includes(el.year)) {
+              galleryYears.push(el.year);
+              document.getElementById("pills-tab").innerHTML += `
+                                <li class="nav-item">
+                                    <a class="nav-link gallery-pill-link" id="pills-${el.year}-tab" data-toggle="pill"
+                                        href="#pills-${el.year}" role="tab" aria-controls="pills-${el.year}" aria-selected="false">${el.year}</a>
+                                </li>`;
+              document.getElementById("pills-tabContent").innerHTML += `
+                                <div class="tab-pane fade" id="pills-${el.year}" role="tabpanel" aria-labelledby="pills-${el.year}-tab">
+                                    <div class="container">
+                                        <div class="row" id="gallery-pill-row-${el.year}">
+                                        
+                                        </div>
+                                    </div>
+                                </div>`;
+            }
+            document.getElementById(`gallery-pill-row-${el.year}`).innerHTML +=
+              `
+                            <div class="col-lg-4">
+                                <a href="${el.imageFile.url}" class="img-gal" data-lightbox="gallery-home" data-title="${el.caption}">
+                                    <div class="single-imgs relative">
+                                        <div class="overlay overlay-bg"></div>
+                                        <img class="img" src="${el.imageFile.url}"
+                                        alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        `;
+            let tabpills = document.getElementsByClassName("gallery-pill-link");
+            tabpills[0].classList.add("active");
+            let tabpanes = document.getElementsByClassName("tab-pane");
+            tabpanes[0].classList.add("show", "active");
+          }
+        }
+        getImagesFromCMS();
+      </script>
+    </div>
+  </section>
+</section>
