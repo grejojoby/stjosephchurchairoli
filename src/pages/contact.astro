@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CommonMetaTags from "../components/CommonMetaTags.astro";
+import CommonBanner from "../components/CommonBanner.astro";
 ---
 
 <!DOCTYPE html>
@@ -17,23 +18,7 @@ import CommonMetaTags from "../components/CommonMetaTags.astro";
 
 <body>
 	<Header />
-
-	<!-- start banner Area -->
-	<section class="banner-area relative about-banner" id="home">
-		<div class="overlay overlay-bg"></div>
-		<div class="container">
-			<div class="row d-flex align-items-center justify-content-center">
-				<div class="about-content col-lg-12">
-					<h1 class="text-white">
-						Contact Us
-					</h1>
-					<p class="text-white link-nav"><a href="index.html">Home </a> <span
-							class="fa fa-chevron-right"></span> <a href="contact.html"> Contact Us</a></p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End banner Area -->
+	<CommonBanner title="Contact Us" />
 
 	<!-- Start contact-page Area -->
 	<section class="contact-page-area section-gap">
