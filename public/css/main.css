@@ -2092,12 +2092,13 @@ h6 {
 }
 
 #header {
-    position: fixed;
+    position: sticky;
     left: 0;
     top: 0;
     right: 0;
     transition: all 0.5s;
-    z-index: 997
+    z-index: 997;
+    background-color: rgba(4, 9, 30, 1);
 }
 
 #header.header-scrolled {
@@ -2484,18 +2485,18 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-bottom: 10px
 }
 
-.banner-area {
-    background: url("../img/assets/new_altar.webp") right;
-    background-size: cover
+.banner-img-home {
+    max-height: 95vh;
+    width: 100%;
 }
 
 .banner-area .overlay-bg {
-    background-color: rgba(4, 9, 30, 0.7)
+    background-color: rgba(4, 9, 30, 0.4)
 }
 
 @media (max-width: 767px) {
     .fullscreen {
-        height: 700px !important
+        height: 500px !important
     }
 }
 
