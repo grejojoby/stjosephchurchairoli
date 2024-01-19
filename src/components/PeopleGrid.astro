@@ -1,0 +1,27 @@
+---
+const { dataList } = Astro.props;
+---
+
+<section class="course-details-area pt-40 mt-5 pb-40">
+  <div class="container bootdey">
+    <div class="row">
+      {
+        dataList.map((item) => (
+          <div class="col-lg-3 col-md-6 col-6 mt-4 pt-2">
+            <div class="team text-center rounded p-3 py-4">
+              <img
+                src=`${item.imgSrc}`
+                class="img-fluid avatar avatar-medium shadow rounded-pill"
+                alt=""
+              />
+              <div class="content mt-3">
+                <h4 class="title mb-0">{item.name}</h4>
+                <small class="text-muted">{item.period}</small>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
