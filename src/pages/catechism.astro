@@ -4,6 +4,9 @@ import Footer from "../components/Footer.astro";
 import CommonBanner from "../components/CommonBanner.astro";
 import Gallery from "../components/Gallery.astro";
 import CommonMetaTags from "../components/CommonMetaTags.astro";
+import PeopleTable from "../components/PeopleTable.astro";
+
+import { catechismList } from "../data/catechismData.js";
 
 const cmsUrl =
   "https://ap-south-1.cdn.hygraph.com/content/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20Assets%20%7B%0A%20%20galleries(orderBy%3A%20year_DESC%2C%20where%3A%20%7Btags%3A%20Catechism%7D)%20%7B%0A%20%20%20%20year%0A%20%20%20%20tags%0A%20%20%20%20imageFile%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20caption%0A%20%20%7D%0A%7D%0A&operationName=Assets";
@@ -18,13 +21,13 @@ const cmsUrl =
     <meta charset="UTF-8" />
     <!-- Site Title -->
     <title>Catechism - St. Joseph's Church, Airoli</title>
-	
+
     <CommonMetaTags />
   </head>
 
   <body>
     <Header />
-	<CommonBanner title="Catechism (Faith Formation)" />
+    <CommonBanner title="Catechism (Faith Formation)" />
 
     <section class="course-details-area pt-10 pb-40">
       <div class="container">
@@ -97,108 +100,7 @@ const cmsUrl =
                   of the Holy Spirit, alongside various fun-filled games.
                 </div>
                 <div class="jq-tab-content" data-tab="3">
-                  <div class="row">
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mrs. Greeny Joby</span><br />Head
-                        Mistress
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. Grejo Joby</span><br />Forane
-                        Secretary
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Ms. Angel Mary Binoy</span><br
-                        />Jesus Kids
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mrs. Jincy Sajimon</span><br
-                        />Jesus Kids
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Ms. Rosemary Stephen</span><br
-                        />Jesus Kids
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mrs. Seles Ciyon</span><br />Grade
-                        I
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mrs. Daly Paulson</span><br />Grade
-                        II
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mrs. Shaina Joseph</span><br
-                        />Grade III
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Ms. Anu Shaji</span><br />Grade IV
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mrs. Daya Benny</span><br />Grade V
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mrs. Siji Vincent</span><br />Grade
-                        VI
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mrs. Tresa John</span><br />Grade
-                        VII
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mrs. Shincy Anoop</span><br />Grade
-                        VIII
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mrs. Ansorosy Biju</span><br
-                        />Grade IX
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mrs. Sophy Anne Jison</span><br
-                        />Grade X
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mrs. Jenifer Abin</span><br />Grade
-                        XI
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mrs. Jincy Joseph</span><br />Grade
-                        XII
-                      </p>
-                    </div>
-                  </div>
+                  <PeopleTable dataList={catechismList} />
                 </div>
               </div>
             </div>
