@@ -4,6 +4,9 @@ import Footer from "../components/Footer.astro";
 import CommonMetaTags from "../components/CommonMetaTags.astro";
 import CommonBanner from "../components/CommonBanner.astro";
 import Gallery from "../components/Gallery.astro";
+import PeopleTable from "../components/PeopleTable.astro";
+
+import { youthList } from "../data/youthData.js";
 
 const cmsUrl =
   "https://ap-south-1.cdn.hygraph.com/content/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20Assets%20%7B%0A%20%20galleries(orderBy%3A%20year_DESC%2C%20where%3A%20%7Btags%3A%20Youth%7D)%20%7B%0A%20%20%20%20year%0A%20%20%20%20tags%0A%20%20%20%20imageFile%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20caption%0A%20%20%7D%0A%7D%0A&operationName=Assets";
@@ -122,90 +125,7 @@ const cmsUrl =
                   </p>
                 </div>
                 <div class="jq-tab-content" data-tab="3">
-                  <div class="row">
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. Grejo Joby</span><br
-                        />President
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Ms. Angel Mary Binoy</span><br
-                        />Secretary
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Ms. Tisha Tomy</span><br
-                        />Treasurer
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Ms. Shanelle Pallikunnath</span><br
-                        />Vice President
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. Neo Nisen</span><br />Jt.
-                        Secretary
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Ms. Anu Shaji</span><br />DEXCO
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. Antony Joseph</span><br
-                        />Forane Representative
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Ms. Shaunna Pallikunnath</span><br
-                        />Forane Representative
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. Alen Abraham</span><br />PRO
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. Philson Philip</span><br
-                        />Media Representative
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. Mathew George</span><br />KEY
-                        Army Representative I
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Ms. Josna Vinod</span><br />KEY
-                        Army Representative II
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. Nivin Wilson</span><br
-                        />Animator I
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mrs. Neoskia Jesbin</span><br
-                        />Animator II
-                      </p>
-                    </div>
-                  </div>
+                  <PeopleTable dataList={youthList} />
                 </div>
               </div>
             </div>

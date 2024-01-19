@@ -5,6 +5,9 @@ import CommonMetaTags from "../components/CommonMetaTags.astro";
 import CommonBanner from "../components/CommonBanner.astro";
 import Gallery from "../components/Gallery.astro";
 
+import { pithruvediList } from "../data/pithruvediData.js";
+import PeopleTable from "../components/PeopleTable.astro";
+
 const cmsUrl =
   "https://ap-south-1.cdn.hygraph.com/content/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20Assets%20%7B%0A%20%20galleries(orderBy%3A%20year_DESC%2C%20where%3A%20%7Btags%3A%20Pithruvedi%7D)%20%7B%0A%20%20%20%20year%0A%20%20%20%20tags%0A%20%20%20%20imageFile%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20caption%0A%20%20%7D%0A%7D%0A&operationName=Assets";
 ---
@@ -26,9 +29,6 @@ const cmsUrl =
       <div class="container">
         <div class="row">
           <div class="col-lg-12 left-contents">
-            <!-- <div class="main-image">
-								<img class="img-fluid" src="img/m-img.jpg" alt="">
-							</div> -->
             <div class="jq-tab-wrapper" id="horizontalTab">
               <div class="jq-tab-menu">
                 <div class="jq-tab-title active" data-tab="1">About</div>
@@ -73,50 +73,7 @@ const cmsUrl =
                   events like tug-of-war contests and badminton competitions.
                 </div>
                 <div class="jq-tab-content" data-tab="2">
-                  <div class="row">
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. Jison Jose</span><br
-                        />President
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. Joseph Varghese</span><br
-                        />Secretary
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. Binoy Chacko</span><br
-                        />Treasurer
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. Jithin Thomas</span><br
-                        />Forane Executive
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. Joy John</span><br />Central
-                        Council Representative
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. P D Stephen</span><br
-                        />Internal Auditor
-                      </p>
-                    </div>
-                    <div class="col-md-3">
-                      <p>
-                        <span class="fw-500">Mr. Justine Abraham</span><br
-                        />Internal Auditor
-                      </p>
-                    </div>
-                  </div>
+                  <PeopleTable dataList={pithruvediList} />
                 </div>
               </div>
             </div>
