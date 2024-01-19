@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CommonBanner from "../components/CommonBanner.astro";
 import PeopleGrid from "../components/PeopleGrid.astro";
+import CommonMetaTags from "../components/CommonMetaTags.astro";
 
 const priestsData = [
 	{
@@ -88,75 +89,10 @@ const priestsData = [
 <html lang="en" class="no-js">
 
 <head>
-	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!-- Author Meta -->
-	<meta name="author" content="Grejo Joby">
-	<!-- Meta Description -->
-	<meta name="description"
-		content="Syro Malabar Catholic Church affliated with Diocese of Kalyan. We are a parish situated in the locality of Airoli, Navi Mumbai. We have organizations like Catechism, Mathrusangam, Youth Osmosis, Pithruvedi, Altar Boys. Check latest Bible Readings on our page.">
-	<!-- Meta Keyword -->
-	<meta name="keywords"
-		content="st joseph, church, airoli, navi mumbai, kalyan, diocese, syro, malabar, catholic, roman catholic, mumbai, kerala, maharashtra,  youth, catechism, mathrusangam, pithruvedi, osmosis, bible, reading, readings, bible reading, date">
-	<!-- meta character set -->
 	<meta charset="UTF-8">
-	<!-- Site Title -->
 	<title>Former Parish Priests - St. Joseph's Church, Airoli</title>
-
-	<meta property="og:url" content="https://stjosephchurchairoli.in/former-priests.html">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Former Parish Priests - St. Joseph's Church, Airoli">
-	<meta property="og:description"
-		content="Syro Malabar Catholic Church affliated with Diocese of Kalyan. We are a parish situated in the locality of Airoli, Navi Mumbai. We have organizations like Catechism, Mathrusangam, Youth Osmosis, Pithruvedi, Altar Boys. Check latest Bible Readings on our page.">
-	<meta property="og:image" content="https://stjosephchurchairoli.in/img/logo-og.webp">
-
-	<!-- Twitter Meta Tags -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta property="twitter:domain" content="stjosephchurchairoli.in">
-	<meta property="twitter:url" content="https://stjosephchurchairoli.in/former-priests.html">
-	<meta name="twitter:title" content="Former Parish Priests - St. Joseph's Church, Airoli">
-	<meta name="twitter:description"
-		content="Syro Malabar Catholic Church affliated with Diocese of Kalyan. We are a parish situated in the locality of Airoli, Navi Mumbai. We have organizations like Catechism, Mathrusangam, Youth Osmosis, Pithruvedi, Altar Boys. Check latest Bible Readings on our page.">
-	<meta name="twitter:image" content="https://stjosephchurchairoli.in/img/logo-og.webp">
-
-	<link rel="apple-touch-icon" sizes="57x57" href="img/assets/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="img/assets/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/assets/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="img/assets/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/assets/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="img/assets/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="img/assets/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="img/assets/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/assets/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="img/assets/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/assets/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="img/assets/favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/assets/favicon/favicon-16x16.png">
-	<link rel="manifest" href="img/assets/favicon/manifest.json">
-
-
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/lightbox.min.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/custom.css">
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLD5LZRK8L"></script>
-	<script type="text/javascript">
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'G-SLD5LZRK8L');
-	</script>
-	<script type="text/javascript">
-		(function (c, l, a, r, i, t, y) {
-			c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-			t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-			y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-		})(window, document, "clarity", "script", "hulc0wkyib");
-	</script>
+	<CommonMetaTags />
 </head>
 
 <body>
