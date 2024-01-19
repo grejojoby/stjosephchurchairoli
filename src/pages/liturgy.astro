@@ -3,245 +3,67 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CommonMetaTags from "../components/CommonMetaTags.astro";
 import CommonBanner from "../components/CommonBanner.astro";
+import PeopleTable from "../components/PeopleTable.astro";
+
+import {
+  choirList,
+  altarAngelsList,
+  liturgyCommitteeList,
+  prayerGroupList,
+  decorationCommitteeList,
+} from "../scripts/liturgyData.js";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Liturgy - St. Joseph's Church, Airoli</title>
+    <CommonMetaTags />
+  </head>
 
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8">
-	<title>Liturgy - St. Joseph's Church, Airoli</title>
-	<CommonMetaTags />
-</head>
+  <body>
+    <Header />
+    <CommonBanner title="Liturgy" />
 
-<body>
-	<Header />
-	<CommonBanner title="Liturgy" />
+    <section class="course-details-area pt-10 pb-40">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 left-contents">
+            <div class="jq-tab-wrapper" id="horizontalTab">
+              <div class="jq-tab-menu">
+                <div class="jq-tab-title active" data-tab="1">Choir</div>
+                <div class="jq-tab-title" data-tab="2">Altar Angels</div>
+                <div class="jq-tab-title" data-tab="3">Liturgy Committee</div>
+                <div class="jq-tab-title" data-tab="4">Prayer Group</div>
+                <div class="jq-tab-title" data-tab="5">
+                  Decoration Committee
+                </div>
+              </div>
+              <div class="jq-tab-content-wrapper">
+                <div class="jq-tab-content active" data-tab="1">
+                  <PeopleTable dataList={choirList} />
+                </div>
+                <div class="jq-tab-content" data-tab="2">
+                  <PeopleTable dataList={altarAngelsList} />
+                </div>
+                <div class="jq-tab-content" data-tab="3">
+                  <PeopleTable dataList={liturgyCommitteeList} />
+                </div>
+                <div class="jq-tab-content" data-tab="4">
+                  <PeopleTable dataList={prayerGroupList} />
+                </div>
+                <div class="jq-tab-content" data-tab="5">
+                  <PeopleTable dataList={decorationCommitteeList} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<section class="course-details-area pt-10 pb-40">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 left-contents">
-					<div class="jq-tab-wrapper" id="horizontalTab">
-						<div class="jq-tab-menu">
-							<div class="jq-tab-title active" data-tab="1">Choir</div>
-							<div class="jq-tab-title" data-tab="2">Altar Angels</div>
-							<div class="jq-tab-title" data-tab="3">Liturgy Committee</div>
-							<div class="jq-tab-title" data-tab="3">Prayer Group</div>
-							<div class="jq-tab-title" data-tab="4">Decoration Committee</div>
-						</div>
-						<div class="jq-tab-content-wrapper">
-							<div class="jq-tab-content active" data-tab="1">
-								<div class="row">
-									<div class="col-md-3">
-										<p><span class="fw-500">Mr. Grejo Joby</span><br>Choir Master/Keyboardist/Singer
-										</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Ms. Philcy Philip</span><br>Singer</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Ms. Anu Shaji</span><br>Singer</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Mr. Alen Abraham</span><br>Singer</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Ms. Jismi Mathew</span><br>Singer</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Ms. Angelmary Binoy</span><br>Singer</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Ms. Josna Vinod</span><br>Singer</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Mr. Joel Johnson</span><br>Keyboardist</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Mast. Mathew George</span><br>Keyboardist</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Mast. Annex Shaji</span><br>Drummer</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="jq-tab-content" data-tab="2">
-								<div class="row">
-									<div class="col-md-3">
-										<p><span class="fw-500">Mrs. Daly Paulson</span><br>Animator</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Annex Shaji</span><br>President</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Chris Binoy</span><br>Secretary</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Mathew George</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Joshua Joseph</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Neo Nisen</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Philson Philip</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Ronald Stephen</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Zubin John</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Aaron Sajimon</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Reuben Sajimon</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Evan Joseph</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Lloyd Dennies</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Jesher Sumoy</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Noel Wilson</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Nigel Wilson</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Shaun Varghese</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Helon Ajith</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Rivan Mario</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Alvin Ajith</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Arvin Ajith</span></p>
-									</div>
-
-								</div>
-							</div>
-							<div class="jq-tab-content" data-tab="3">
-								<div class="row">
-									<div class="col-md-3">
-										<p><span class="fw-500">Mr. C. J. Antony</span><br>Member</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Mr. T. S. Ouseph</span><br>Member</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Mr. Jose Joseph</span><br>Member</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Mr. A. C. John</span><br>Trustee</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Mr. George Manachery</span><br>Trustee</p>
-									</div>
-								</div>
-							</div>
-							<div class="jq-tab-content" data-tab="4">
-								<div class="row">
-									<div class="col-md-3">
-										<p><span class="fw-500">Alphonsa Abraham</span><br>Prayer Group Leader</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Johnson Chittilappilly</span><br>PRO</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Binoy Chacko</span><br>Retreat Co-ord</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Jessy Antony</span><br>Member</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Siji Vincent</span><br>Member</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Jincy Sajimon</span><br>Member</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">M J Antony</span><br>Member</p>
-									</div>
-
-								</div>
-							</div>
-							<div class="jq-tab-content" data-tab="5">
-								<div class="row">
-									<div class="col-md-3">
-										<p><span class="fw-500">Jennifer Johnson</span><br>Cordinator</p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Alphonsa Abraham</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Ansorosy Biju</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Gilsy Jacob</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Jessy Maxy</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Jincy Sajimon</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Joyce Stephen</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Neoskia Jesbin</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Preena Francis</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Shaina Joseph</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Sherly Justine</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Shiby Philip</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Sophy Jison</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Suja Johny</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Tresa John</span></p>
-									</div>
-									<div class="col-md-3">
-										<p><span class="fw-500">Riya SIjo</span></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<Footer />
-
-</body>
-
+    <Footer />
+  </body>
 </html>
