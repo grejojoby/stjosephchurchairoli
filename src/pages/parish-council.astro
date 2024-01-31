@@ -1,0 +1,125 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CommonBanner from "../components/CommonBanner.astro";
+import PeopleGridWithoutImage from "../components/PeopleGridWithoutImage.astro";
+import CommonMetaTags from "../components/CommonMetaTags.astro";
+
+const dataList = [
+	{
+		name: "Fr. Lijo Velliyamkandathil",
+		subText: "Parish Priest"
+	},
+	{
+		name: "Mr. A. C. John",
+		subText: "First Trustee"
+	},
+	{
+		name: "Mr. George Manachery",
+		subText: "Second Trustee"
+	},
+	{
+		name: "Mr. Honey Johny",
+		subText: "Forane Council Executive"
+	},
+	{
+		name: "Mrs. Lilly Stalin",
+		subText: "Forane Council Executive"
+	},
+	{
+		name: "Mr. Justin Xavier",
+		subText: "Forane Council Executive"
+	},
+	{
+		name: "Mr. Vinod Abraham",
+		subText: "Ex Trustee"
+	},
+	{
+		name: "Mrs. Greeny Joby",
+		subText: "Catechism HM"
+	},
+	{
+		name: "Mr. Jison Jose",
+		subText: "Pithruvedi President"
+	},
+	{
+		name: "Mrs. Sherly Justine",
+		subText: "Mathusangam President"
+	},
+	{
+		name: "Mr. Grejo Joby",
+		subText: "Youth President, Choir Master, PRO"
+	},
+	{
+		name: "Mr. Alen Abraham",
+		subText: "Choir Rep."
+	},
+	{
+		name: "Mr. Stephen Palatty",
+		subText: "KKK & Karunya Trust Rep."
+	},
+	{
+		name: "Mrs. Alphonsa Abraham",
+		subText: "Charismatic Rep."
+	},
+	{
+		name: "Ms. Rosemary Stephen",
+		subText: "JNF Rep."
+	},
+	{
+		name: "Ms. Anu Shaji",
+		subText: "DEXCO"
+	},
+	{
+		name: "Mr. Abin Antony",
+		subText: "Social Security Scheme, Elected Member"
+	},
+	{
+		name: "Mr. C. J. Antony",
+		subText: "Liturgical Committee, Elected Member"
+	},
+	{
+		name: "Mrs. Jennifer Johnson",
+		subText: "Elected Member"
+	},
+	{
+		name: "Mr. Shaji Xavier",
+		subText: "Elected Member"
+	},
+	{
+		name: "Mr. Nisen Antony",
+		subText: "Elected Member"
+	},
+	{
+		name: "Mr. Charles Xavier",
+		subText: "Elected Member"
+	},
+	{
+		name: "Mr. Alex Antony",
+		subText: "Elected Member"
+	},
+	{
+		name: "Mr. Sijo Johnson",
+		subText: "Elected Member"
+	}
+];
+---
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Parish Council - St. Joseph's Church, Airoli</title>
+	<CommonMetaTags />
+</head>
+
+<body>
+	<Header />
+	<CommonBanner title="Parish Council" />
+	<PeopleGridWithoutImage dataList={dataList} />
+	<Footer />
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CommonMetaTags from "../components/CommonMetaTags.astro";
+import CommonBanner from "../components/CommonBanner.astro";
+
+const unitsData = [
+	{
+		name: "St. Alphonsa Unit",
+		divId: "StAlphonsaUnit",
+		area: "Sector 9 & 10",
+		families: "20",
+		president: "Mary George",
+		secretary: "Angel Mary Binoy",
+		treasurer: "Annamma Mathew"
+	},
+	{
+		name: "St. Chavara Unit",
+		divId: "StChavaraUnit",
+		area: "Sector 19 & 20",
+		families: "19",
+		president: "Alphonsa Abraham",
+		secretary: "Sherly Justine",
+		treasurer: "Daly Paulson"
+	},
+	{
+		name: "St. Euphresia Unit",
+		divId: "StEuphresiaUnit",
+		area: "Sector 1, 2 & 3",
+		families: "14",
+		president: "Suja Johny",
+		secretary: "Josna Vinod",
+		treasurer: "Jestin Joshi"
+	},
+	{
+		name: "St. Mariam Thressia Unit",
+		divId: "StMariamThressiaUnit",
+		area: "Sector 8 & 8A",
+		families: "14",
+		president: "Jessy Antony",
+		secretary: "Sophy Anne Jison",
+		treasurer: "Tresa John"
+	},
+	{
+		name: "St. Mother Teresa Unit",
+		divId: "StMotherTeresaUnit",
+		area: "Sector 6, 7, 8A, Rabale, Ghansoli",
+		families: "22",
+		president: "Joby George",
+		secretary: "Anagha Sebastian",
+		treasurer: "Lina Wilson"
+	},
+	{
+		name: "St. Mary's Unit",
+		divId: "StMarysUnit",
+		area: "Sector 4, 5, 14, 15, 16, 17",
+		families: "19",
+		president: "P D Stephen",
+		secretary: "Jincy Sajimon",
+		treasurer: "Joyce Stephen"
+	},
+];
+---
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Family Units - St. Joseph's Church, Airoli</title>
+
+	<CommonMetaTags />
+</head>
+
+<body>
+	<Header />
+	<CommonBanner title="Family Units" />
+
+	<section>
+		<div class="container">
+			{
+				unitsData.map(unit => (
+					<div class="row unit-row justify-content-center" id={unit.divId}>
+					<div class="col-md-12 text-center mb-4">
+						<h2><strong>{unit.name}</strong></h2>
+					</div>
+					<div class="row justify-content-center text-center unit-box">
+						<div class="col-4 text-center">
+							<p class="fw-500">Area<br><strong>{unit.area}</strong></p>
+						</div>
+						<div class="col-4"></div>
+						<div class="col-4 text-center">
+							<p class="fw-500">No. of Families<br><strong>{unit.families}</strong></p>
+						</div>
+						<div class="col-md-4">
+							<p class="fw-500">President<br><strong>{unit.president}</strong></p>
+						</div>
+						<div class="col-md-4">
+							<p class="fw-500">Secretary<br><strong>{unit.secretary}</strong></p>
+						</div>
+						<div class="col-md-4">
+							<p class="fw-500">Treasurer<br><strong>{unit.treasurer}</strong></p>
+						</div>
+					</div>
+				</div>
+				))
+			}
+			
+			
+		</div>
+	</section>
+
+	<Footer />
+</body>
+
+</html>

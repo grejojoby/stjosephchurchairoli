@@ -1,0 +1,60 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CommonBanner from "../components/CommonBanner.astro";
+import PeopleGrid from "../components/PeopleGrid.astro";
+import CommonMetaTags from "../components/CommonMetaTags.astro";
+
+const priestsList = [
+  {
+    name: "Fr. Jins Kannadippara",
+    subText: "Diocese of Kalyan",
+    imgSrc: "/img/vocations/frJins.webp",
+  },
+];
+
+const sistersList = [
+  {
+    name: "Sr. Gracelin, SABS",
+    subText: "St. Thomas Convent, Anuppur, Madhya Pradesh",
+    imgSrc: "/img/vocations/5.webp",
+  },
+  {
+    name: "Sr. Regina Parokkaran",
+    subText: "Missionary Sisters of St. Peter Claver, Zug, Switzerland",
+    imgSrc: "/img/vocations/4.webp",
+  },
+];
+
+const brothersList = [
+  {
+    name: "Br. Jenson Alappatt",
+    subText: "Diocese of Shamshabad,<br>Thrissur, Kerala",
+    imgSrc: "/img/vocations/3.webp",
+  },
+  {
+    name: "Br. Akshay Attokaran",
+    subText: "Diocese of Kalyan, <br>Rome, Italy",
+    imgSrc: "/img/vocations/2.webp",
+  },
+];
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Vocations From Parish - St. Joseph's Church, Airoli</title>
+    <CommonMetaTags />
+  </head>
+
+  <body>
+    <Header />
+    <CommonBanner title="Vocations From Parish" />
+    <PeopleGrid dataList={priestsList} sectionTitle="Priests" />
+    <PeopleGrid dataList={sistersList} sectionTitle="Sisters" />
+    <PeopleGrid dataList={brothersList} sectionTitle="Brothers" />
+    <Footer />
+  </body>
+</html>

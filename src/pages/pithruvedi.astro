@@ -1,0 +1,88 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CommonMetaTags from "../components/CommonMetaTags.astro";
+import CommonBanner from "../components/CommonBanner.astro";
+import Gallery from "../components/Gallery.astro";
+
+import { pithruvediList } from "../data/pithruvediData.js";
+import PeopleTable from "../components/PeopleTable.astro";
+
+const cmsUrl =
+  "https://ap-south-1.cdn.hygraph.com/content/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20Assets%20%7B%0A%20%20galleries(orderBy%3A%20year_DESC%2C%20where%3A%20%7Btags%3A%20Pithruvedi%7D)%20%7B%0A%20%20%20%20year%0A%20%20%20%20tags%0A%20%20%20%20imageFile%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20caption%0A%20%20%7D%0A%7D%0A&operationName=Assets";
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Pithruvedi - St. Joseph's Church, Airoli</title>
+    <CommonMetaTags />
+  </head>
+
+  <body>
+    <Header />
+    <CommonBanner title="Pithruvedi" />
+
+    <section class="course-details-area pt-10 pb-40">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 left-contents">
+            <div class="jq-tab-wrapper" id="horizontalTab">
+              <div class="jq-tab-menu">
+                <div class="jq-tab-title active" data-tab="1">About</div>
+                <div class="jq-tab-title" data-tab="2">Executives</div>
+              </div>
+              <div class="jq-tab-content-wrapper">
+                <div class="jq-tab-content active" data-tab="1">
+                  <b class="fw-500">CELEBRATING FATHERHOOD IN CHRIST</b><br />
+                  <br />
+                  Pithruvedi is an organization that welcomes all married men from
+                  families in the Parish to become members. The association is dedicated
+                  to St. Joseph, the Patron saint, who serves as a role model for
+                  husbands and fathers through his complete surrender to God's will,
+                  diligent protection of the holy family, and exemplary self-control.
+                  <br />
+                  <blockquote class="generic-blockquote">
+                    <strong
+                      >"The righteous lead blameless lives; blessed are their
+                      children after them."
+                      <br />
+                    </strong>
+                    <em><b>Proverbs 20:7</b></em>
+                  </blockquote>
+                  On October 18, 2009, Pithruvedi had its formal inauguration from
+                  His Beatitude Cardinal Mar George Alencherry, the present Major
+                  Archbishop of the Syro-Malabar Catholic Church, at the Presentation
+                  Convent School Ground in Nerul. In this first assembly, H.E. Mar
+                  Thomas Elavanal promulgated the Pithruvedi By-Laws.
+                  <br /><br />
+                  The primary objective of this association is to bring the members
+                  of the parish community together in their shared religious beliefs
+                  by nurturing them with spiritual principles and teachings. Pithruvedi
+                  endeavors to instill the significance of selflessness, prioritizing
+                  family values, and leading the family in a life centered around
+                  prayer and worship.
+                  <br /><br />
+                  The members of Pithruvedi solely host the feast of St. Joseph,
+                  the patron saint of the parish, which includes liturgy, choir,
+                  and Ottunercha, in addition to actively participating and carrying
+                  out each of their respective tasks throughout every parish feast
+                  and programme. Additionally, Pithruvedi takes part in diocesan
+                  events like tug-of-war contests and badminton competitions.
+                </div>
+                <div class="jq-tab-content" data-tab="2">
+                  <PeopleTable dataList={pithruvediList} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Gallery cmsUrl={cmsUrl} />
+    <Footer />
+  </body>
+</html>

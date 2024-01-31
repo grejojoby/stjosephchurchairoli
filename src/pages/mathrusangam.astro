@@ -1,0 +1,88 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CommonMetaTags from "../components/CommonMetaTags.astro";
+import CommonBanner from "../components/CommonBanner.astro";
+import Gallery from "../components/Gallery.astro";
+
+import { mathrusangamList } from "../data/mathrusangamData.js";
+import PeopleTable from "../components/PeopleTable.astro";
+
+const cmsUrl =
+  "https://ap-south-1.cdn.hygraph.com/content/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20Assets%20%7B%0A%20%20galleries(orderBy%3A%20year_DESC%2C%20where%3A%20%7Btags%3A%20Mathrusangam%7D)%20%7B%0A%20%20%20%20year%0A%20%20%20%20tags%0A%20%20%20%20imageFile%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20caption%0A%20%20%7D%0A%7D%0A&operationName=Assets";
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Mathrusangam - St. Joseph's Church, Airoli</title>
+    <CommonMetaTags />
+  </head>
+
+  <body>
+    <Header />
+    <CommonBanner title="Mathrusangam" />
+
+    <section class="course-details-area pt-10 pb-40">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 left-contents">
+            <div class="jq-tab-wrapper" id="horizontalTab">
+              <div class="jq-tab-menu">
+                <div class="jq-tab-title active" data-tab="1">About</div>
+                <div class="jq-tab-title" data-tab="2">Executives</div>
+              </div>
+              <div class="jq-tab-content-wrapper">
+                <div class="jq-tab-content active" data-tab="1">
+                  Since the beginning of the church, Mathrusangam has existed
+                  with the primary goal of enlightening Christ via motherhood.
+                  Mothers, who are the lights of families, are helped and
+                  supported by the members of Mathrusangam. On March 25, 1996,
+                  Mar Paul Chittilapilly issued a proclamation establishing
+                  Kalyan Mathrusangham, and Msgr. Thomas Thalachira served as
+                  the organization's first director.
+                  <br />
+                  <blockquote class="generic-blockquote">
+                    <strong
+                      >"Her children rise up and call her blessed; her husband
+                      also, and he praises her."
+                      <br />
+                    </strong>
+                    <em><b>Proverbs 31:28</b></em>
+                  </blockquote>
+                  Currently, Kalyan Mathrusangham (KMS) has over 6500 mothers as
+                  members, and they collaborate closely with other organizations
+                  at the parish, zonal, and diocese levels. Mathrusangam aims to
+                  provide support and encouragement to mothers within the church
+                  community. They offer a platform for mothers to connect, share
+                  experiences, and uplift one another in their journey of motherhood.
+                  <br /><br />
+                  Their primary objective is to deepen their faith, provide spiritual
+                  guidance, and equip them to be godly mothers and role models. The
+                  members of Mathrusangam solely organize the feasts of MotherMary
+                  especially 'Mathavinte Vanakkamasam' in the month of May. Additionally,
+                  they take part in a variety of diocesan activities like group singing,
+                  mime, bible quizzes, etc., which allows them to witness Christ
+                  through their deeds.
+                  <br /><br />
+                  The association recognizes the unique challenges and joys of motherhood
+                  and seeks to empower and uplift mothers in their Christian faith
+                  and their role as mothers.
+                  <br />
+                </div>
+                <div class="jq-tab-content" data-tab="2">
+                  <PeopleTable dataList={mathrusangamList} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Gallery cmsUrl={cmsUrl} />
+    <Footer />
+  </body>
+</html>

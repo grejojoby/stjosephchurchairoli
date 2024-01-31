@@ -1,0 +1,17 @@
+---
+const { dataList } = Astro.props;
+---
+
+<div class="row">
+  {
+    dataList.map((item) => (
+      <div class="col-md-3">
+        <p>
+          <span class="fw-500">{item.name}</span>
+          <br />
+          {item.subText}
+        </p>
+      </div>
+    ))
+  }
+</div>

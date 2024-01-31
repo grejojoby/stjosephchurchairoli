@@ -1,0 +1,69 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CommonMetaTags from "../components/CommonMetaTags.astro";
+import CommonBanner from "../components/CommonBanner.astro";
+import PeopleTable from "../components/PeopleTable.astro";
+
+import {
+  choirList,
+  altarAngelsList,
+  liturgyCommitteeList,
+  prayerGroupList,
+  decorationCommitteeList,
+} from "../data/liturgyData.js";
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Liturgy - St. Joseph's Church, Airoli</title>
+    <CommonMetaTags />
+  </head>
+
+  <body>
+    <Header />
+    <CommonBanner title="Liturgy" />
+
+    <section class="course-details-area pt-10 pb-40">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 left-contents">
+            <div class="jq-tab-wrapper" id="horizontalTab">
+              <div class="jq-tab-menu">
+                <div class="jq-tab-title active" data-tab="1">Choir</div>
+                <div class="jq-tab-title" data-tab="2">Altar Angels</div>
+                <div class="jq-tab-title" data-tab="3">Liturgy Committee</div>
+                <div class="jq-tab-title" data-tab="4">Prayer Group</div>
+                <div class="jq-tab-title" data-tab="5">
+                  Decoration Committee
+                </div>
+              </div>
+              <div class="jq-tab-content-wrapper">
+                <div class="jq-tab-content active" data-tab="1">
+                  <PeopleTable dataList={choirList} />
+                </div>
+                <div class="jq-tab-content" data-tab="2">
+                  <PeopleTable dataList={altarAngelsList} />
+                </div>
+                <div class="jq-tab-content" data-tab="3">
+                  <PeopleTable dataList={liturgyCommitteeList} />
+                </div>
+                <div class="jq-tab-content" data-tab="4">
+                  <PeopleTable dataList={prayerGroupList} />
+                </div>
+                <div class="jq-tab-content" data-tab="5">
+                  <PeopleTable dataList={decorationCommitteeList} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</html>
