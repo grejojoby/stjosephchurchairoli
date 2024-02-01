@@ -1,0 +1,1 @@
+export const PARISH_PRIEST = "Fr. Bipin Chovattukunnel";
