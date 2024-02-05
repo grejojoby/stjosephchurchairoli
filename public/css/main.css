@@ -48,9 +48,9 @@ body {
 
 ol,
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none
+    /* margin: 0; */
+    /* padding: 0; */
+    /* list-style: none */
 }
 
 select {
@@ -5023,4 +5023,11 @@ dl.toggle.time-line:before {
 .section-title .title {
     letter-spacing: 0.5px;
     font-size: 30px;
+}
+
+.footer-area ol,
+.footer-area ul, .header-top ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
 }

@@ -1,0 +1,48 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CommonBanner from "../components/CommonBanner.astro";
+import CommonMetaTags from "../components/CommonMetaTags.astro";
+import AllAnnoucements from "../components/AllAnnoucements.astro";
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+
+    <CommonMetaTags />
+
+    <title>Announcements - St. Joseph's Church, Airoli</title>
+
+    <link rel="stylesheet" href="/css/timeline.css" />
+  </head>
+
+  <body>
+    <Header />
+    <CommonBanner title="Annoucements" />
+
+    <section class="timeline-body">
+      <div class="container">
+        <div class="row px-5 mt-5 mb-5 pb-3">
+          <script src="https://use.typekit.net/bkt6ydm.js"></script>
+          <script type="text/javascript">
+            try {
+              Typekit.load({ async: true });
+            } catch (e) {}
+          </script>
+
+          <ul class="timeline" id="announcementsContainer">
+
+
+            
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+	<AllAnnoucements />
+  </body>
+</html>

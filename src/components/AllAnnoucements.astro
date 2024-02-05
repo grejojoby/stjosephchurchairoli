@@ -1,0 +1,51 @@
+---
+
+---
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        function loadAnnouncements() {
+            const announcementslist = $('#announcementsContainer')[0]
+            if (!announcementslist) return;
+
+            let responseData;
+            const fetchData = async (url) => {
+                try {
+                    const response = await fetch(url);
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+                    onSuccess(data.data.annoucements);
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                }
+            };
+
+
+            const onSuccess = (data) => {
+                let announcementContent = "";
+                data.forEach(item => {
+                    announcementContent += `
+                    <li class="timeline-item announcement-item">
+                        <div class="timeline-info">
+                            <span>${item.date}</span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            ${item.annoucementRichText.html}
+                        </div>
+                    </li>`
+                });
+                document.getElementById('announcementsContainer').innerHTML = announcementContent;
+            };
+
+            const apiUrl = 'https://api-ap-south-1.hygraph.com/v2/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20MyQuery%20%7B%0A%20%20annoucements(orderBy%3A%20date_DESC%2C%20last%3A%201000)%20%7B%0A%20%20%20%20id%0A%20%20%20%20date%0A%20%20%20%20annoucementRichText%20%7B%0A%20%20%20%20%20%20html%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&operationName=MyQuery';
+            fetchData(apiUrl);
+
+        }
+        loadAnnouncements()
+    });
+</script>
