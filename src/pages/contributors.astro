@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import CommonBanner from "../components/CommonBanner.astro";
 import Footer from "../components/Footer.astro";
 import CommonMetaTags from "../components/CommonMetaTags.astro";
 
@@ -155,24 +156,7 @@ const pageTitle = "Contributors - St. Joseph's Church, Airoli";
 
 <body>
 	<Header />
-
-	<!-- start banner Area -->
-	<section class="banner-area relative about-banner" id="home">
-		<div class="overlay overlay-bg"></div>
-		<div class="container">
-			<div class="row d-flex align-items-center justify-content-center">
-				<div class="about-content col-lg-12">
-					<h1 class="text-white">
-						Website Contributors
-					</h1>
-					<p class="text-white link-nav"><a href="index.html">Home </a> <span
-							class="fa fa-chevron-right"></span> <a href="contributors.html"> Website Contributors</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End banner Area -->
+	<CommonBanner title="Website Contributors" />
 
 	<!-- Start course-details Area -->
 	<section class="course-details-area pt-10 pb-40">
