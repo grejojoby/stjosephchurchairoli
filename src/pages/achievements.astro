@@ -12,6 +12,10 @@ const achievementsData = [
     desc: "Our Catechism Department won A+ Grade for Best Catechetical Unit of Kalyan Diocese in Isaac Group.",
   },
 ];
+
+const pageUrl = "https://stjosephchurchairoli.in/achievements/";
+const pageTitle = "Achievements - St. Joseph's Church, Airoli";
+
 ---
 
 <!doctype html>
@@ -19,8 +23,17 @@ const achievementsData = [
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
-    <title>Achievements - St. Joseph's Church, Airoli</title>
+
     <CommonMetaTags />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:title" content={pageTitle} />
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:url" content={pageUrl} />
+    <meta name="twitter:title" content={pageTitle} />
+
+    <title>{pageTitle}</title>
   </head>
 
   <body>

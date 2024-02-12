@@ -8,6 +8,9 @@ import Gallery from "../components/Gallery.astro";
 import { pithruvediList } from "../data/pithruvediData.js";
 import PeopleTable from "../components/PeopleTable.astro";
 
+const pageUrl = "https://stjosephchurchairoli.in/pithruvedi/";
+const pageTitle = "Pithruvedi - St. Joseph's Church, Airoli";
+
 const cmsUrl =
   "https://ap-south-1.cdn.hygraph.com/content/cleslmwlh2c5j01ujd6j7gzuf/master?query=query%20Assets%20%7B%0A%20%20galleries(orderBy%3A%20year_DESC%2C%20where%3A%20%7Btags%3A%20Pithruvedi%7D)%20%7B%0A%20%20%20%20year%0A%20%20%20%20tags%0A%20%20%20%20imageFile%20%7B%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%20%20caption%0A%20%20%7D%0A%7D%0A&operationName=Assets";
 ---
@@ -17,7 +20,15 @@ const cmsUrl =
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
-    <title>Pithruvedi - St. Joseph's Church, Airoli</title>
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:title" content={pageTitle} />
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:url" content={pageUrl} />
+    <meta name="twitter:title" content={pageTitle} />
+
+    <title>{pageTitle}</title>
     <CommonMetaTags />
   </head>
 

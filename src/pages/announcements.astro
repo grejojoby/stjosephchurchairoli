@@ -4,6 +4,9 @@ import Footer from "../components/Footer.astro";
 import CommonBanner from "../components/CommonBanner.astro";
 import CommonMetaTags from "../components/CommonMetaTags.astro";
 import AllAnnoucements from "../components/AllAnnoucements.astro";
+
+const pageUrl = "https://stjosephchurchairoli.in/achievements/";
+const pageTitle = "Announcements - St. Joseph's Church, Airoli";
 ---
 
 <!doctype html>
@@ -14,7 +17,15 @@ import AllAnnoucements from "../components/AllAnnoucements.astro";
 
     <CommonMetaTags />
 
-    <title>Announcements - St. Joseph's Church, Airoli</title>
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:title" content={pageTitle} />
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:url" content={pageUrl} />
+    <meta name="twitter:title" content={pageTitle} />
+
+    <title>{pageTitle}</title>
 
     <link rel="stylesheet" href="/css/timeline.css" />
   </head>
@@ -33,16 +44,12 @@ import AllAnnoucements from "../components/AllAnnoucements.astro";
             } catch (e) {}
           </script>
 
-          <ul class="timeline" id="announcementsContainer">
-
-
-            
-          </ul>
+          <ul class="timeline" id="announcementsContainer"></ul>
         </div>
       </div>
     </section>
 
     <Footer />
-	<AllAnnoucements />
+    <AllAnnoucements />
   </body>
 </html>

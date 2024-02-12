@@ -3,101 +3,153 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CommonMetaTags from "../components/CommonMetaTags.astro";
 import CommonBanner from "../components/CommonBanner.astro";
+
+const pageUrl = "https://stjosephchurchairoli.in/contact/";
+const pageTitle = "Contact - St. Joseph's Church, Airoli";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:title" content={pageTitle} />
 
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8">
-	<title>Contact - St. Joseph's Church, Airoli</title>
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:url" content={pageUrl} />
+    <meta name="twitter:title" content={pageTitle} />
 
-	<CommonMetaTags />
-</head>
+    <title>{pageTitle}</title>
 
-<body>
-	<Header />
-	<CommonBanner title="Contact Us" />
+    <CommonMetaTags />
+  </head>
 
-	<section class="contact-page-area section-gap">
-		<div class="container">
-			<div class="row">
-				<div class="map-wrap">
-					<div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
-						<div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
-						<script type="text/javascript">(function () {
-								var setting = { "height": 540, "zoom": 16, "queryString": "St. Joseph's Church, Airoli, Sainath Sport Club Road, Omkar Society, Sector 10, Airoli, Navi Mumbai, Maharashtra, India", "place_id": "ChIJF8a_i6u45zsRUVdOMKpwack", "satellite": false, "centerCoord": [19.147099955513657, 72.98924300000003], "cid": "0xc96970aa304e5751", "lang": "en", "cityUrl": "/india/mumbai", "cityAnchorText": "Map of Mumbai, West Zone, India", "id": "map-9cd199b9cc5410cd3b1ad21cab2e54d3", "embed_id": "934106" };
-								var d = document;
-								var s = d.createElement('script');
-								s.src = 'https://1map.com/js/script-for-user.js?embed_id=934106';
-								s.async = true;
-								s.onload = function (e) {
-									window.OneMap.initMap(setting)
-								};
-								var to = d.getElementsByTagName('script')[0];
-								to.parentNode.insertBefore(s, to);
-							})();</script><a href="https://1map.com/map-embed">1 Map</a>
-					</div>
-				</div>
-				<div class="col-lg-4 d-flex flex-column address-wrap">
-					<div class="single-contact-address d-flex flex-row">
-						<div class="icon">
-							<span class="fa fa-home"></span>
-						</div>
-						<div class="contact-details">
-							<h5>Church Address</h5>
-							<p>
-								Plot No 7, Sector 10, Airoli - 400708
-							</p>
-						</div>
-					</div>
-					<div class="single-contact-address d-flex flex-row">
-						<div class="icon">
-							<span class="fa fa-envelope"></span>
-						</div>
-						<div class="contact-details">
-							<h5>info@stjosephchurchairoli.in</h5>
-							<p>Send us your query anytime!</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-8">
-					<form class="form-area contact-form text-right" id="myForm"
-						action="https://script.google.com/macros/s/AKfycbyWVUtdrc9t01SknYoiY95a0uYIRwf4H4v3fpl-7uXZNi8ICxYnaJtT4KaERRMMIG61/exec"
-						method="post">
-						<div class="row">
-							<div class="col-lg-6 form-group">
-								<input name="Name" placeholder="Enter your name" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Enter your name'"
-									class="common-input mb-20 form-control" required="" type="text">
+  <body>
+    <Header />
+    <CommonBanner title="Contact Us" />
 
-								<input name="Email" placeholder="Enter email address"
-									pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
-									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'"
-									class="common-input mb-20 form-control" required="" type="email">
+    <section class="contact-page-area section-gap">
+      <div class="container">
+        <div class="row">
+          <div class="map-wrap">
+            <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+              <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+              <script type="text/javascript">
+                (function () {
+                  var setting = {
+                    height: 540,
+                    zoom: 16,
+                    queryString:
+                      "St. Joseph's Church, Airoli, Sainath Sport Club Road, Omkar Society, Sector 10, Airoli, Navi Mumbai, Maharashtra, India",
+                    place_id: "ChIJF8a_i6u45zsRUVdOMKpwack",
+                    satellite: false,
+                    centerCoord: [19.147099955513657, 72.98924300000003],
+                    cid: "0xc96970aa304e5751",
+                    lang: "en",
+                    cityUrl: "/india/mumbai",
+                    cityAnchorText: "Map of Mumbai, West Zone, India",
+                    id: "map-9cd199b9cc5410cd3b1ad21cab2e54d3",
+                    embed_id: "934106",
+                  };
+                  var d = document;
+                  var s = d.createElement("script");
+                  s.src =
+                    "https://1map.com/js/script-for-user.js?embed_id=934106";
+                  s.async = true;
+                  s.onload = function (e) {
+                    window.OneMap.initMap(setting);
+                  };
+                  var to = d.getElementsByTagName("script")[0];
+                  to.parentNode.insertBefore(s, to);
+                })();
+              </script><a href="https://1map.com/map-embed">1 Map</a>
+            </div>
+          </div>
+          <div class="col-lg-4 d-flex flex-column address-wrap">
+            <div class="single-contact-address d-flex flex-row">
+              <div class="icon">
+                <span class="fa fa-home"></span>
+              </div>
+              <div class="contact-details">
+                <h5>Church Address</h5>
+                <p>Plot No 7, Sector 10, Airoli - 400708</p>
+              </div>
+            </div>
+            <div class="single-contact-address d-flex flex-row">
+              <div class="icon">
+                <span class="fa fa-envelope"></span>
+              </div>
+              <div class="contact-details">
+                <h5>info@stjosephchurchairoli.in</h5>
+                <p>Send us your query anytime!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <form
+              class="form-area contact-form text-right"
+              id="myForm"
+              action="https://script.google.com/macros/s/AKfycbyWVUtdrc9t01SknYoiY95a0uYIRwf4H4v3fpl-7uXZNi8ICxYnaJtT4KaERRMMIG61/exec"
+              method="post"
+            >
+              <div class="row">
+                <div class="col-lg-6 form-group">
+                  <input
+                    name="Name"
+                    placeholder="Enter your name"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter your name'"
+                    class="common-input mb-20 form-control"
+                    required=""
+                    type="text"
+                  />
 
-								<input name="Subject" placeholder="Enter subject" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Enter subject'" class="common-input mb-20 form-control"
-									required="" type="text">
-							</div>
-							<div class="col-lg-6 form-group">
-								<textarea class="common-textarea form-control" name="Message"
-									placeholder="Enter Message" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Enter Message'" required=""></textarea>
-							</div>
-							<div class="col-lg-12">
-								<div class="alert-msg text-align-left" id="alertMsg"></div>
-								<button class="genric-btn primary send-message-btn" id="SubmitBtn">Send Message</button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
+                  <input
+                    name="Email"
+                    placeholder="Enter email address"
+                    pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter email address'"
+                    class="common-input mb-20 form-control"
+                    required=""
+                    type="email"
+                  />
 
-	<Footer />
-</body>
+                  <input
+                    name="Subject"
+                    placeholder="Enter subject"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter subject'"
+                    class="common-input mb-20 form-control"
+                    required=""
+                    type="text"
+                  />
+                </div>
+                <div class="col-lg-6 form-group">
+                  <textarea
+                    class="common-textarea form-control"
+                    name="Message"
+                    placeholder="Enter Message"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter Message'"
+                    required=""></textarea>
+                </div>
+                <div class="col-lg-12">
+                  <div class="alert-msg text-align-left" id="alertMsg"></div>
+                  <button
+                    class="genric-btn primary send-message-btn"
+                    id="SubmitBtn">Send Message</button
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <Footer />
+  </body>
 </html>

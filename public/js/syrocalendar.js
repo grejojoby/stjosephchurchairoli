@@ -112,7 +112,7 @@ function FetchData(TodaysDate) {
                 ;
             xhr.send();
         };
-        getJSON('https://syrocalendar.tk/SyroMalabarCalendar/?Mode=JSON&Type=MADELY&Date=' + today, function (err, tmtm) {
+        getJSON('https://syrocalendar.com/SyroMalabarCalendar/?Mode=JSON&Type=MADELY&Date=' + today, function (err, tmtm) {
             if (err != null) {
                 console.error(err);
             } else {

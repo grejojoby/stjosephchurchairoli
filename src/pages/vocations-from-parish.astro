@@ -5,6 +5,9 @@ import CommonBanner from "../components/CommonBanner.astro";
 import PeopleGrid from "../components/PeopleGrid.astro";
 import CommonMetaTags from "../components/CommonMetaTags.astro";
 
+const pageUrl = "https://stjosephchurchairoli.in/vocations-from-parish/";
+const pageTitle = "Vocations from Parish - St. Joseph's Church, Airoli";
+
 const priestsList = [
   {
     name: "Fr. Jins Kannadippara",
@@ -45,7 +48,15 @@ const brothersList = [
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
-    <title>Vocations From Parish - St. Joseph's Church, Airoli</title>
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:title" content={pageTitle} />
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:url" content={pageUrl} />
+    <meta name="twitter:title" content={pageTitle} />
+
+    <title>{pageTitle}</title>
     <CommonMetaTags />
   </head>
 

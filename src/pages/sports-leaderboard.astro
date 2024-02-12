@@ -2,6 +2,9 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CommonMetaTags from "../components/CommonMetaTags.astro";
+
+const pageUrl = "https://stjosephchurchairoli.in/sports-leaderboard/";
+const pageTitle = "Sports Leaderboard - St. Joseph's Church, Airoli";
 ---
 
 <!doctype html>
@@ -9,7 +12,15 @@ import CommonMetaTags from "../components/CommonMetaTags.astro";
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
-    <title>Sports Leaderboard - St. Joseph's Church, Airoli</title>
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:title" content={pageTitle} />
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:url" content={pageUrl} />
+    <meta name="twitter:title" content={pageTitle} />
+
+    <title>{pageTitle}</title>
     <CommonMetaTags />
   </head>
 

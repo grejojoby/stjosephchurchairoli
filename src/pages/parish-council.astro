@@ -6,121 +6,130 @@ import PeopleGridWithoutImage from "../components/PeopleGridWithoutImage.astro";
 import CommonMetaTags from "../components/CommonMetaTags.astro";
 import { PARISH_PRIEST } from "../data/parishDetails.js";
 
+const pageUrl = "https://stjosephchurchairoli.in/parish-council/";
+const pageTitle = "Parish Council - St. Joseph's Church, Airoli";
+
 const dataList = [
-	{
-		name: PARISH_PRIEST,
-		subText: "Parish Priest"
-	},
-	{
-		name: "Mr. A. C. John",
-		subText: "First Trustee"
-	},
-	{
-		name: "Mr. George Manachery",
-		subText: "Second Trustee"
-	},
-	{
-		name: "Mr. Honey Johny",
-		subText: "Forane Council Executive"
-	},
-	{
-		name: "Mrs. Lilly Stalin",
-		subText: "Forane Council Executive"
-	},
-	{
-		name: "Mr. Justin Xavier",
-		subText: "Forane Council Executive"
-	},
-	{
-		name: "Mr. Vinod Abraham",
-		subText: "Ex Trustee"
-	},
-	{
-		name: "Mrs. Greeny Joby",
-		subText: "Catechism HM"
-	},
-	{
-		name: "Mr. Jison Jose",
-		subText: "Pithruvedi President"
-	},
-	{
-		name: "Mrs. Sherly Justine",
-		subText: "Mathusangam President"
-	},
-	{
-		name: "Mr. Grejo Joby",
-		subText: "Youth President, Choir Master, PRO"
-	},
-	{
-		name: "Mr. Alen Abraham",
-		subText: "Choir Rep."
-	},
-	{
-		name: "Mr. Stephen Palatty",
-		subText: "KKK & Karunya Trust Rep."
-	},
-	{
-		name: "Mrs. Alphonsa Abraham",
-		subText: "Charismatic Rep."
-	},
-	{
-		name: "Ms. Rosemary Stephen",
-		subText: "JNF Rep."
-	},
-	{
-		name: "Ms. Anu Shaji",
-		subText: "DEXCO"
-	},
-	{
-		name: "Mr. Abin Antony",
-		subText: "Social Security Scheme, Elected Member"
-	},
-	{
-		name: "Mr. C. J. Antony",
-		subText: "Liturgical Committee, Elected Member"
-	},
-	{
-		name: "Mrs. Jennifer Johnson",
-		subText: "Elected Member"
-	},
-	{
-		name: "Mr. Shaji Xavier",
-		subText: "Elected Member"
-	},
-	{
-		name: "Mr. Nisen Antony",
-		subText: "Elected Member"
-	},
-	{
-		name: "Mr. Charles Xavier",
-		subText: "Elected Member"
-	},
-	{
-		name: "Mr. Alex Antony",
-		subText: "Elected Member"
-	},
-	{
-		name: "Mr. Sijo Johnson",
-		subText: "Elected Member"
-	}
+  {
+    name: PARISH_PRIEST,
+    subText: "Parish Priest",
+  },
+  {
+    name: "Mr. A. C. John",
+    subText: "First Trustee",
+  },
+  {
+    name: "Mr. George Manachery",
+    subText: "Second Trustee",
+  },
+  {
+    name: "Mr. Honey Johny",
+    subText: "Forane Council Executive",
+  },
+  {
+    name: "Mrs. Lilly Stalin",
+    subText: "Forane Council Executive",
+  },
+  {
+    name: "Mr. Justin Xavier",
+    subText: "Forane Council Executive",
+  },
+  {
+    name: "Mr. Vinod Abraham",
+    subText: "Ex Trustee",
+  },
+  {
+    name: "Mrs. Greeny Joby",
+    subText: "Catechism HM",
+  },
+  {
+    name: "Mr. Jison Jose",
+    subText: "Pithruvedi President",
+  },
+  {
+    name: "Mrs. Sherly Justine",
+    subText: "Mathusangam President",
+  },
+  {
+    name: "Mr. Grejo Joby",
+    subText: "Youth President, Choir Master, PRO",
+  },
+  {
+    name: "Mr. Alen Abraham",
+    subText: "Choir Rep.",
+  },
+  {
+    name: "Mr. Stephen Palatty",
+    subText: "KKK & Karunya Trust Rep.",
+  },
+  {
+    name: "Mrs. Alphonsa Abraham",
+    subText: "Charismatic Rep.",
+  },
+  {
+    name: "Ms. Rosemary Stephen",
+    subText: "JNF Rep.",
+  },
+  {
+    name: "Ms. Anu Shaji",
+    subText: "DEXCO",
+  },
+  {
+    name: "Mr. Abin Antony",
+    subText: "Social Security Scheme, Elected Member",
+  },
+  {
+    name: "Mr. C. J. Antony",
+    subText: "Liturgical Committee, Elected Member",
+  },
+  {
+    name: "Mrs. Jennifer Johnson",
+    subText: "Elected Member",
+  },
+  {
+    name: "Mr. Shaji Xavier",
+    subText: "Elected Member",
+  },
+  {
+    name: "Mr. Nisen Antony",
+    subText: "Elected Member",
+  },
+  {
+    name: "Mr. Charles Xavier",
+    subText: "Elected Member",
+  },
+  {
+    name: "Mr. Alex Antony",
+    subText: "Elected Member",
+  },
+  {
+    name: "Mr. Sijo Johnson",
+    subText: "Elected Member",
+  },
 ];
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:title" content={pageTitle} />
 
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8">
-	<title>Parish Council - St. Joseph's Church, Airoli</title>
-	<CommonMetaTags />
-</head>
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:url" content={pageUrl} />
+    <meta name="twitter:title" content={pageTitle} />
 
-<body>
-	<Header />
-	<CommonBanner title="Parish Council" />
-	<PeopleGridWithoutImage dataList={dataList} />
-	<Footer />
-</body>
+    <title>{pageTitle}</title>
+    <CommonMetaTags />
+  </head>
 
+  <body>
+    <Header />
+    <CommonBanner title="Parish Council" />
+    <PeopleGridWithoutImage dataList={dataList} />
+    <Footer />
+  </body>
 </html>
